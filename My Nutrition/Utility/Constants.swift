@@ -5,6 +5,12 @@
 //  Created by Igna on 26/06/2023.
 //
 
+// Typealias
+
+typealias Week = Array<Day>
+
+// Enums
+
 enum FoodType: Int, Codable {
     case none           = -1
     case protein        = 0
