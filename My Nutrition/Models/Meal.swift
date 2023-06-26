@@ -53,6 +53,7 @@ class Meal: Equatable, Codable {
     func delete_food(_ food: Food) {
         for (i,_food) in _foods.enumerated() {
             if _food == food {
+                _counter[_food.type().rawValue] -= 1
                 _foods.remove(at: i)
             }
         }
@@ -60,21 +61,26 @@ class Meal: Equatable, Codable {
     
     /// Delete food at index
     func delete_food_at(_ i: Int) {
+        var j = _foods[i].type().rawValue
+        _counter[j] -= 1
         _foods.remove(at: i)
     }
     
     /// Delete last
     func delete_last() {
-        _foods.removeLast()
+        var i = _foods.removeLast().type().rawValue
+        _counter[i] -= 1
     }
     
     /// Delete first
     func delete_first() {
-        _foods.removeFirst()
+        var i = _foods.removeFirst().type().rawValue
+        _counter[i] -= 1
     }
     
-    /// Delete all
+    /// Delete all foods and reset counter
     func delete_all() {
+        _counter = [0,0,0]
         _foods.removeAll()
     }
     
