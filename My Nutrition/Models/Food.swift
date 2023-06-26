@@ -18,15 +18,18 @@ class Food: CustomStringConvertible, Equatable, Comparable, Codable {
         return self._name
     }
     
+    // Constructor
     init(name: String, type: FoodType) {
         self._name = name
         self._type = type
     }
     
+    // Equtable
     static func == (lhs: Food, rhs: Food) -> Bool {
         return lhs._name == rhs._name && lhs._type == rhs._type
     }
     
+    // Comparable
     /// Lexicographical comparison
     static func < (lhs: Food, rhs: Food) -> Bool {
         return lhs._name < rhs._name
@@ -34,16 +37,18 @@ class Food: CustomStringConvertible, Equatable, Comparable, Codable {
     
     // MARK: - GETs
     
+    /// Returns the name of the Food
     func name() -> String {
         return _name
     }
     
+    /// Returns the type of the Food
     func type() -> FoodType {
         return _type
     }
     
     /// Returns the color depending on the food type
-    private func associatedColorType() -> Color {
+    func associated_color_type() -> Color {
         switch _type {
         case .none:
             return .accentColor
