@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7024E4712A4A02E8005A5BF9 /* My_NutritionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4702A4A02E8005A5BF9 /* My_NutritionApp.swift */; };
+		7024E4732A4A02E8005A5BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4722A4A02E8005A5BF9 /* ContentView.swift */; };
+		7024E4752A4A02EA005A5BF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7024E4742A4A02EA005A5BF9 /* Assets.xcassets */; };
+		7024E4782A4A02EA005A5BF9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7024E4772A4A02EA005A5BF9 /* Preview Assets.xcassets */; };
+		7024E4832A4A02EB005A5BF9 /* My_NutritionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4822A4A02EB005A5BF9 /* My_NutritionTests.swift */; };
+		7024E48D2A4A02EB005A5BF9 /* My_NutritionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E48C2A4A02EB005A5BF9 /* My_NutritionUITests.swift */; };
+		7024E48F2A4A02EB005A5BF9 /* My_NutritionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E48E2A4A02EB005A5BF9 /* My_NutritionUITestsLaunchTests.swift */; };
+		7024E49D2A4A03D7005A5BF9 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E49C2A4A03D7005A5BF9 /* Food.swift */; };
+		7024E49E2A4A03D7005A5BF9 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E49C2A4A03D7005A5BF9 /* Food.swift */; };
+		7024E4A12A4A044E005A5BF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4A02A4A044E005A5BF9 /* Constants.swift */; };
+		7024E4A22A4A044E005A5BF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4A02A4A044E005A5BF9 /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7024E47F2A4A02EB005A5BF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7024E4652A4A02E8005A5BF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7024E46C2A4A02E8005A5BF9;
+			remoteInfo = "My Nutrition";
+		};
+		7024E4892A4A02EB005A5BF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7024E4652A4A02E8005A5BF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7024E46C2A4A02E8005A5BF9;
+			remoteInfo = "My Nutrition";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7024E46D2A4A02E8005A5BF9 /* My Nutrition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Nutrition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7024E4702A4A02E8005A5BF9 /* My_NutritionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_NutritionApp.swift; sourceTree = "<group>"; };
+		7024E4722A4A02E8005A5BF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7024E4742A4A02EA005A5BF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7024E4772A4A02EA005A5BF9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7024E4792A4A02EA005A5BF9 /* My_Nutrition.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = My_Nutrition.entitlements; sourceTree = "<group>"; };
+		7024E47E2A4A02EB005A5BF9 /* My NutritionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My NutritionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7024E4822A4A02EB005A5BF9 /* My_NutritionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_NutritionTests.swift; sourceTree = "<group>"; };
+		7024E4882A4A02EB005A5BF9 /* My NutritionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My NutritionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7024E48C2A4A02EB005A5BF9 /* My_NutritionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_NutritionUITests.swift; sourceTree = "<group>"; };
+		7024E48E2A4A02EB005A5BF9 /* My_NutritionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_NutritionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7024E49C2A4A03D7005A5BF9 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		7024E4A02A4A044E005A5BF9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7024E46A2A4A02E8005A5BF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7024E47B2A4A02EB005A5BF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7024E4852A4A02EB005A5BF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7024E4642A4A02E8005A5BF9 = {
+			isa = PBXGroup;
+			children = (
+				7024E46F2A4A02E8005A5BF9 /* My Nutrition */,
+				7024E4812A4A02EB005A5BF9 /* My NutritionTests */,
+				7024E48B2A4A02EB005A5BF9 /* My NutritionUITests */,
+				7024E46E2A4A02E8005A5BF9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7024E46E2A4A02E8005A5BF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7024E46D2A4A02E8005A5BF9 /* My Nutrition.app */,
+				7024E47E2A4A02EB005A5BF9 /* My NutritionTests.xctest */,
+				7024E4882A4A02EB005A5BF9 /* My NutritionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7024E46F2A4A02E8005A5BF9 /* My Nutrition */ = {
+			isa = PBXGroup;
+			children = (
+				7024E49F2A4A043C005A5BF9 /* Utility */,
+				7024E49B2A4A033C005A5BF9 /* Models */,
+				7024E4702A4A02E8005A5BF9 /* My_NutritionApp.swift */,
+				7024E4722A4A02E8005A5BF9 /* ContentView.swift */,
+				7024E4742A4A02EA005A5BF9 /* Assets.xcassets */,
+				7024E4792A4A02EA005A5BF9 /* My_Nutrition.entitlements */,
+				7024E4762A4A02EA005A5BF9 /* Preview Content */,
+			);
+			path = "My Nutrition";
+			sourceTree = "<group>";
+		};
+		7024E4762A4A02EA005A5BF9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7024E4772A4A02EA005A5BF9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7024E4812A4A02EB005A5BF9 /* My NutritionTests */ = {
+			isa = PBXGroup;
+			children = (
+				7024E4822A4A02EB005A5BF9 /* My_NutritionTests.swift */,
+			);
+			path = "My NutritionTests";
+			sourceTree = "<group>";
+		};
+		7024E48B2A4A02EB005A5BF9 /* My NutritionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7024E48C2A4A02EB005A5BF9 /* My_NutritionUITests.swift */,
+				7024E48E2A4A02EB005A5BF9 /* My_NutritionUITestsLaunchTests.swift */,
+			);
+			path = "My NutritionUITests";
+			sourceTree = "<group>";
+		};
+		7024E49B2A4A033C005A5BF9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7024E49C2A4A03D7005A5BF9 /* Food.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7024E49F2A4A043C005A5BF9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				7024E4A02A4A044E005A5BF9 /* Constants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7024E46C2A4A02E8005A5BF9 /* My Nutrition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7024E4922A4A02EB005A5BF9 /* Build configuration list for PBXNativeTarget "My Nutrition" */;
+			buildPhases = (
+				7024E4692A4A02E8005A5BF9 /* Sources */,
+				7024E46A2A4A02E8005A5BF9 /* Frameworks */,
+				7024E46B2A4A02E8005A5BF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My Nutrition";
+			productName = "My Nutrition";
+			productReference = 7024E46D2A4A02E8005A5BF9 /* My Nutrition.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7024E47D2A4A02EB005A5BF9 /* My NutritionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7024E4952A4A02EB005A5BF9 /* Build configuration list for PBXNativeTarget "My NutritionTests" */;
+			buildPhases = (
+				7024E47A2A4A02EB005A5BF9 /* Sources */,
+				7024E47B2A4A02EB005A5BF9 /* Frameworks */,
+				7024E47C2A4A02EB005A5BF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7024E4802A4A02EB005A5BF9 /* PBXTargetDependency */,
+			);
+			name = "My NutritionTests";
+			productName = "My NutritionTests";
+			productReference = 7024E47E2A4A02EB005A5BF9 /* My NutritionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7024E4872A4A02EB005A5BF9 /* My NutritionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7024E4982A4A02EB005A5BF9 /* Build configuration list for PBXNativeTarget "My NutritionUITests" */;
+			buildPhases = (
+				7024E4842A4A02EB005A5BF9 /* Sources */,
+				7024E4852A4A02EB005A5BF9 /* Frameworks */,
+				7024E4862A4A02EB005A5BF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7024E48A2A4A02EB005A5BF9 /* PBXTargetDependency */,
+			);
+			name = "My NutritionUITests";
+			productName = "My NutritionUITests";
+			productReference = 7024E4882A4A02EB005A5BF9 /* My NutritionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7024E4652A4A02E8005A5BF9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					7024E46C2A4A02E8005A5BF9 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					7024E47D2A4A02EB005A5BF9 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 7024E46C2A4A02E8005A5BF9;
+					};
+					7024E4872A4A02EB005A5BF9 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 7024E46C2A4A02E8005A5BF9;
+					};
+				};
+			};
+			buildConfigurationList = 7024E4682A4A02E8005A5BF9 /* Build configuration list for PBXProject "My Nutrition" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7024E4642A4A02E8005A5BF9;
+			productRefGroup = 7024E46E2A4A02E8005A5BF9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7024E46C2A4A02E8005A5BF9 /* My Nutrition */,
+				7024E47D2A4A02EB005A5BF9 /* My NutritionTests */,
+				7024E4872A4A02EB005A5BF9 /* My NutritionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7024E46B2A4A02E8005A5BF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7024E4782A4A02EA005A5BF9 /* Preview Assets.xcassets in Resources */,
+				7024E4752A4A02EA005A5BF9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7024E47C2A4A02EB005A5BF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7024E4862A4A02EB005A5BF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7024E4692A4A02E8005A5BF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7024E4732A4A02E8005A5BF9 /* ContentView.swift in Sources */,
+				7024E4712A4A02E8005A5BF9 /* My_NutritionApp.swift in Sources */,
+				7024E49D2A4A03D7005A5BF9 /* Food.swift in Sources */,
+				7024E4A12A4A044E005A5BF9 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7024E47A2A4A02EB005A5BF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7024E4832A4A02EB005A5BF9 /* My_NutritionTests.swift in Sources */,
+				7024E49E2A4A03D7005A5BF9 /* Food.swift in Sources */,
+				7024E4A22A4A044E005A5BF9 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7024E4842A4A02EB005A5BF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7024E48D2A4A02EB005A5BF9 /* My_NutritionUITests.swift in Sources */,
+				7024E48F2A4A02EB005A5BF9 /* My_NutritionUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7024E4802A4A02EB005A5BF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7024E46C2A4A02E8005A5BF9 /* My Nutrition */;
+			targetProxy = 7024E47F2A4A02EB005A5BF9 /* PBXContainerItemProxy */;
+		};
+		7024E48A2A4A02EB005A5BF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7024E46C2A4A02E8005A5BF9 /* My Nutrition */;
+			targetProxy = 7024E4892A4A02EB005A5BF9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7024E4902A4A02EB005A5BF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7024E4912A4A02EB005A5BF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7024E4932A4A02EB005A5BF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "My Nutrition/My_Nutrition.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"My Nutrition/Preview Content\"";
+				DEVELOPMENT_TEAM = Q633UWVVF6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "COBox.My-Nutrition";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7024E4942A4A02EB005A5BF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "My Nutrition/My_Nutrition.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"My Nutrition/Preview Content\"";
+				DEVELOPMENT_TEAM = Q633UWVVF6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "COBox.My-Nutrition";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7024E4962A4A02EB005A5BF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q633UWVVF6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "COBox.My-NutritionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Nutrition.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/My Nutrition";
+			};
+			name = Debug;
+		};
+		7024E4972A4A02EB005A5BF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q633UWVVF6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "COBox.My-NutritionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Nutrition.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/My Nutrition";
+			};
+			name = Release;
+		};
+		7024E4992A4A02EB005A5BF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q633UWVVF6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "COBox.My-NutritionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "My Nutrition";
+			};
+			name = Debug;
+		};
+		7024E49A2A4A02EB005A5BF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q633UWVVF6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "COBox.My-NutritionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "My Nutrition";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7024E4682A4A02E8005A5BF9 /* Build configuration list for PBXProject "My Nutrition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7024E4902A4A02EB005A5BF9 /* Debug */,
+				7024E4912A4A02EB005A5BF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7024E4922A4A02EB005A5BF9 /* Build configuration list for PBXNativeTarget "My Nutrition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7024E4932A4A02EB005A5BF9 /* Debug */,
+				7024E4942A4A02EB005A5BF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7024E4952A4A02EB005A5BF9 /* Build configuration list for PBXNativeTarget "My NutritionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7024E4962A4A02EB005A5BF9 /* Debug */,
+				7024E4972A4A02EB005A5BF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7024E4982A4A02EB005A5BF9 /* Build configuration list for PBXNativeTarget "My NutritionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7024E4992A4A02EB005A5BF9 /* Debug */,
+				7024E49A2A4A02EB005A5BF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7024E4652A4A02E8005A5BF9 /* Project object */;
+}
