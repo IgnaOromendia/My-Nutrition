@@ -77,6 +77,14 @@ class Predictor: Codable {
         }
     }
     
+    /// Deletes all the foods that have only one appearence
+    func delete_least_frequently_used() {
+        for food in amounts[0] {
+            dicc_food.removeValue(forKey: food)
+        }
+        amounts[0].removeAll()
+    }
+    
     
     
 }
