@@ -33,7 +33,7 @@ class Meal: Equatable, Codable {
     
     /// Returns the mos udes food type
     func most_used_type() -> FoodType {
-        var max_food = max(_counter[0], _counter[1], _counter[2], 0)
+        let max_food = max(_counter[0], _counter[1], _counter[2], 0)
         if max_food == _counter[0] {return .protein}
         if max_food == _counter[1] {return .carboohydrates}
         return .vegetables
@@ -61,20 +61,20 @@ class Meal: Equatable, Codable {
     
     /// Delete food at index
     func delete_food_at(_ i: Int) {
-        var j = _foods[i].type().rawValue
+        let j = _foods[i].type().rawValue
         _counter[j] -= 1
         _foods.remove(at: i)
     }
     
     /// Delete last
     func delete_last() {
-        var i = _foods.removeLast().type().rawValue
+        let i = _foods.removeLast().type().rawValue
         _counter[i] -= 1
     }
     
     /// Delete first
     func delete_first() {
-        var i = _foods.removeFirst().type().rawValue
+        let i = _foods.removeFirst().type().rawValue
         _counter[i] -= 1
     }
     
