@@ -8,29 +8,40 @@
 import XCTest
 @testable import My_Nutrition
 
-final class My_NutritionTests: XCTestCase {
+final class Predictor_tests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func test_simple_case() {
+        let food1 = Food(name: "Carne", type: .protein)
+        let food2 = Food(name: "Pollo", type: .protein)
+        let food3 = Food(name: "Ensalada", type: .vegetables)
+        let food4 = Food(name: "Papas", type: .carboohydrates)
+        let pred = Predictor()
+        
+        XCTAssertEqual(pred.most_used().0, Food())
+        XCTAssertEqual(pred.most_used().1, Food())
+        
+        pred.update_value(food1)
+        
+        XCTAssertEqual(pred.most_used().0, food1)
+        XCTAssertEqual(pred.most_used().1, Food())
+        
+        pred.update_value(food1)
+        pred.update_value(food2)
+        
+        XCTAssertEqual(pred.most_used().0, food1)
+        XCTAssertEqual(pred.most_used().1, food2)
+        
+        pred.update_value(food3)
+        pred.update_value(food4)
+        
+        XCTAssertEqual(pred.most_used().0, food1)
+        XCTAssertEqual(pred.most_used().1, food2)
+        
+        pred.update_value(food3)
+        pred.update_value(food3)
+                
+        XCTAssertEqual(pred.most_used().0, food3)
+        XCTAssertEqual(pred.most_used().1, food1)
     }
 
 }
