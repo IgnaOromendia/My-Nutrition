@@ -8,20 +8,31 @@
 import Foundation
 import SwiftUI
 
-class Food: CustomStringConvertible, Equatable, Comparable, Codable {
+class Food: CustomStringConvertible, Equatable, Comparable, Codable, Hashable {
     
     // Variables
     private var _name: String
     private var _type: FoodType
     
-    var description: String {
-        return self._name
-    }
-    
     // Constructor
     init(name: String, type: FoodType) {
         self._name = name
         self._type = type
+    }
+    
+    convenience init() {
+        self.init(name: "", type: .none)
+    }
+    
+    // CustomStringConvertible
+    var description: String {
+        return self._name
+    }
+    
+    // Hashable
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(_name)
+        hasher.combine(_type)
     }
     
     // Equtable
