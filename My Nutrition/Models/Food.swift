@@ -13,15 +13,17 @@ class Food: CustomStringConvertible, Equatable, Comparable, Codable, Hashable {
     // Variables
     private var _name: String
     private var _type: FoodType
+    private var _amount: Int
     
     // Constructor
-    init(name: String, type: FoodType) {
+    init(name: String, type: FoodType, amount: Int = 1) {
         self._name = name
         self._type = type
+        self._amount = amount
     }
     
     convenience init() {
-        self.init(name: "", type: .none)
+        self.init(name: "", type: .none, amount: 0)
     }
     
     // CustomStringConvertible
@@ -56,6 +58,10 @@ class Food: CustomStringConvertible, Equatable, Comparable, Codable, Hashable {
     /// Returns the type of the Food
     func type() -> FoodType {
         return _type
+    }
+    
+    func amount() -> Int {
+        return _amount
     }
     
     /// Returns the color depending on the food type
