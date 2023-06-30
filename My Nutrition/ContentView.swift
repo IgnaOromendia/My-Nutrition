@@ -41,78 +41,100 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var foods: [Food] = []
+    @State private var foods: [Food] = [Food(name: "Carne", type: .protein), Food(name: "Ensalada de lechuga", type: .vegetables)]
     @State private var name = ""
     @State private var type_b = false
     @State private var type_f = 0
     @State private var amount = ""
     
     var body: some View {
-        ZStack {
-            LinearGradient(colors: [.white, .green], startPoint: .bottomTrailing, endPoint: .topLeading)
-                .edgesIgnoringSafeArea(.all)
-            VStack {
-                // Title
-                Text("Add your foods")
-                    .font(.system(size: 35))
-                    .bold()
-                    .padding()
-                
-                // Text fields
-                TextField("Name", text: $name)
-                    .font(.system(size: 20))
-                    .foregroundColor(.black)
-                    .padding()
-                
-                TextField("Amount (1)", text: $amount)
-                    .font(.system(size: 20))
-                    .foregroundColor(.black)
-                    .padding()
-                
-                // Switch
-                Toggle("Add Food Type", isOn: $type_b)
-                    .toggleStyle(SwitchToggleStyle(tint: .white))
-                    .padding()
-                
-                // Segmented Control
-                if type_b {
-                    Picker("Add the food type", selection: $type_f) {
-                        Text("Protein").tag(0)
-                        Text("Carbohydrates").tag(1)
-                        Text("Vegetables").tag(2)
+        NavigationView {
+            ZStack {
+                LinearGradient(colors: [.white, .green], startPoint: .bottomTrailing, endPoint: .topLeading)
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
+                    // Title
+                    Text("Add your foods")
+                        .font(.system(size: 35))
+                        .bold()
+                        .padding()
+                    
+                    // Text fields
+                    TextField("Name", text: $name)
+                        .font(.system(size: 20))
+                        .foregroundColor(.black)
+                        .padding()
+                    
+                    TextField("Amount (1)", text: $amount)
+                        .font(.system(size: 20))
+                        .foregroundColor(.black)
+                        .padding()
+                    
+                    // Switch
+                    Toggle("Add Food Type", isOn: $type_b)
+                        .toggleStyle(SwitchToggleStyle(tint: .white))
+                        .padding()
+                    
+                    // Segmented Control
+                    if type_b {
+                        Picker("Add the food type", selection: $type_f) {
+                            Text("Protein").tag(0)
+                            Text("Carbohydrates").tag(1)
+                            Text("Vegetables").tag(2)
+                        }
+                        .colorMultiply(type_color(type_f).0)
+                        .pickerStyle(.segmented)
+                        // TODO: CHANGE TEXT COLOR;
                     }
-                    .colorMultiply(type_color(type_f).0)
-                    .pickerStyle(.segmented)
-                    // TODO: CHANGE TEXT COLOR;
+                    
+                    // Button
+                    Button("Add Food") {
+                        if (!type_b) {type_f = -1}
+                        foods.append(Food(name: name, type: FoodType(rawValue: type_f)!, amount: Int(amount) ?? 1))
+                        name = ""
+                        type_b = false
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.green)
+                    
+                    // Table view
+                    List(foods, id: \.id) { food in
+                        FoodCell(name: food.name(), type: food.type())
+                            .listRowSeparator(.hidden)
+                    }
+                    .scrollContentBackground(.hidden)
+                    Spacer()
                 }
-                
-                // Button
-                Button("Add Meal") {
-                    foods.append(Food(name: name, type: FoodType(rawValue: type_f)!, amount: Int(amount)!))
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(.green)
-                
-                // Table view
-//                List {
-//
-//                }
-                Spacer()
             }
         }
     }
+}
+
+// TODO: PONER EN OTRO ARCHIVO
+struct FoodCell: View {
+    var name: String
+    var type: FoodType
     
-    func type_color(_ type: Int) -> (Color,Color){ // Background, TextColor
-        switch type {
-        case 0:
-            return (.orange, .white)
-        case 1:
-            return (.yellow, .black)
-        case 2:
-            return (.green, .white)
-        default:
-            return (.white, .black)
+    var body: some View {
+        HStack {
+            Text(name)
+                .font(.system(size: 19))
+                .bold()
+                .foregroundColor(type_color(type.rawValue).0)
         }
+    }
+}
+
+func type_color(_ type: Int) -> (Color,Color){ // Background, TextColor
+    switch type {
+    case 0:
+        return (.orange, .white)
+    case 1:
+        return (.yellow, .black)
+    case 2:
+        return (.green, .white)
+    default:
+        return (.white, .black)
     }
 }
 

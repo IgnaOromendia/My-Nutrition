@@ -8,9 +8,10 @@
 import Foundation
 import SwiftUI
 
-class Food: CustomStringConvertible, Equatable, Comparable, Codable, Hashable {
+class Food: CustomStringConvertible, Equatable, Comparable, Codable, Hashable, Identifiable {
     
     // Variables
+    let id = UUID()
     private var _name: String
     private var _type: FoodType
     private var _amount: Int
