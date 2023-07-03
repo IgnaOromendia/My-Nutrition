@@ -19,6 +19,12 @@ class Meal: Equatable, Codable {
         return lhs._foods == rhs._foods
     }
     
+    // Constructor
+    init(foods: [Food], counter: [Int]) {
+        self._foods = foods
+        self._counter = counter
+    }
+    
     // MARK: - GETs
     
     /// Returns an array of foods
