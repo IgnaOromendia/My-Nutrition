@@ -20,9 +20,9 @@ class Meal: Equatable, Codable {
     }
     
     // Constructor
-    init(foods: [Food], counter: [Int]) {
+    init(foods: [Food]) {
         self._foods = foods
-        self._counter = counter
+        self._counter = [0,0,0]
     }
     
     // MARK: - GETs
