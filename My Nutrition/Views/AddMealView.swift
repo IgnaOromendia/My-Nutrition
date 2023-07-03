@@ -39,7 +39,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AddMealView: View {
     
     @State var moment: DayMoment = .breakfast
     @State private var foods: [Food] = [Food(name: "Carne", type: .protein), Food(name: "Ensalada de lechuga", type: .vegetables)]
@@ -110,32 +110,16 @@ struct ContentView: View {
                     Spacer()
                     
                     // Button
-                    Button("Add Meal") {
-                        //let today = 0 // TODO: Func that gets the day
-                        //current_week[today].add_meal(Meal(foods: foods), on: moment)
-                    }
-                    .padding(10)
-                    .buttonStyle(.borderedProminent)
-                    .tint(.teal)
+//                    NavigationLink(destination: HomeView()) {
+//                        let today = 0 // TODO: Func that gets the day
+//                        current_week[today].add_meal(Meal(foods: foods), on: moment)
+//                        Text("Add Meal")
+//                    }
+//                    .padding(10)
+//                    .buttonStyle(.borderedProminent)
+//                    .tint(.teal)
                 }
             }
-        }
-    }
-}
-
-// TODO: PONER EN OTRO ARCHIVO
-struct FoodCell: View {
-    var name: String
-    var amount: Int
-    var type: FoodType
-    
-    var body: some View {
-        HStack {
-            let text = amount > 1 ? "\(amount) x " + name : name
-            Text(text)
-                .font(.system(size: 19))
-                .bold()
-                .foregroundColor(type_color(type.rawValue).0)
         }
     }
 }
@@ -153,8 +137,8 @@ func type_color(_ type: Int) -> (Color,Color){ // Background, TextColor
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AddMealView_Preview: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AddMealView()
     }
 }
