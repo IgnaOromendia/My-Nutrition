@@ -22,6 +22,7 @@
 		704F59D92A4A0C8300F7B3F1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59D72A4A0C8300F7B3F1 /* Meal.swift */; };
 		704F59DB2A4A14B700F7B3F1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59DA2A4A14B700F7B3F1 /* Day.swift */; };
 		704F59DC2A4A14B700F7B3F1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59DA2A4A14B700F7B3F1 /* Day.swift */; };
+		708E79482A5324F800F628A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708E79472A5324F800F628A5 /* HomeView.swift */; };
 		708EFBD32A4B36EE00E69F9B /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708EFBD22A4B36EE00E69F9B /* Predictor.swift */; };
 		708EFBD42A4B36EE00E69F9B /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708EFBD22A4B36EE00E69F9B /* Predictor.swift */; };
 		70E506AD2A4A43D900B75572 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E506AC2A4A43D900B75572 /* Global.swift */; };
@@ -61,6 +62,7 @@
 		7024E4A02A4A044E005A5BF9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		704F59D72A4A0C8300F7B3F1 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		704F59DA2A4A14B700F7B3F1 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		708E79472A5324F800F628A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		708EFBD22A4B36EE00E69F9B /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
 		70E506AC2A4A43D900B75572 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 				7024E49B2A4A033C005A5BF9 /* Models */,
 				7024E4702A4A02E8005A5BF9 /* My_NutritionApp.swift */,
 				7024E4722A4A02E8005A5BF9 /* ContentView.swift */,
+				708E79472A5324F800F628A5 /* HomeView.swift */,
 				7024E4742A4A02EA005A5BF9 /* Assets.xcassets */,
 				7024E4792A4A02EA005A5BF9 /* My_Nutrition.entitlements */,
 				7024E4762A4A02EA005A5BF9 /* Preview Content */,
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				708E79482A5324F800F628A5 /* HomeView.swift in Sources */,
 				704F59D82A4A0C8300F7B3F1 /* Meal.swift in Sources */,
 				7024E4732A4A02E8005A5BF9 /* ContentView.swift in Sources */,
 				704F59DB2A4A14B700F7B3F1 /* Day.swift in Sources */,

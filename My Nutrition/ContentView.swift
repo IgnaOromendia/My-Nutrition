@@ -41,6 +41,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var moment: DayMoment = .breakfast
     @State private var foods: [Food] = [Food(name: "Carne", type: .protein), Food(name: "Ensalada de lechuga", type: .vegetables)]
     @State private var name = ""
     @State private var type_b = false
@@ -52,7 +53,7 @@ struct ContentView: View {
             ZStack {
                 LinearGradient(colors: [.white, .green], startPoint: .bottomTrailing, endPoint: .topLeading)
                     .edgesIgnoringSafeArea(.all)
-                VStack {
+                VStack(spacing: 20) {
                     // Title
                     Text("Add your foods")
                         .font(.system(size: 35))
@@ -94,6 +95,7 @@ struct ContentView: View {
                         name = ""
                         type_b = false
                     }
+                    .padding(10)
                     .buttonStyle(.borderedProminent)
                     .tint(.green)
                     
@@ -108,7 +110,13 @@ struct ContentView: View {
                     Spacer()
                     
                     // Button
-                    
+                    Button("Add Meal") {
+                        //let today = 0 // TODO: Func that gets the day
+                        //current_week[today].add_meal(Meal(foods: foods), on: moment)
+                    }
+                    .padding(10)
+                    .buttonStyle(.borderedProminent)
+                    .tint(.teal)
                 }
             }
         }
@@ -123,7 +131,7 @@ struct FoodCell: View {
     
     var body: some View {
         HStack {
-            var text = amount > 1 ? "\(amount) x " + name : name
+            let text = amount > 1 ? "\(amount) x " + name : name
             Text(text)
                 .font(.system(size: 19))
                 .bold()
