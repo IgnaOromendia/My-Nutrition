@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7024E4712A4A02E8005A5BF9 /* My_NutritionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4702A4A02E8005A5BF9 /* My_NutritionApp.swift */; };
-		7024E4732A4A02E8005A5BF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4722A4A02E8005A5BF9 /* ContentView.swift */; };
+		7024E4732A4A02E8005A5BF9 /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4722A4A02E8005A5BF9 /* AddMealView.swift */; };
 		7024E4752A4A02EA005A5BF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7024E4742A4A02EA005A5BF9 /* Assets.xcassets */; };
 		7024E4782A4A02EA005A5BF9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7024E4772A4A02EA005A5BF9 /* Preview Assets.xcassets */; };
 		7024E4832A4A02EB005A5BF9 /* My_NutritionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4822A4A02EB005A5BF9 /* My_NutritionTests.swift */; };
@@ -18,6 +18,7 @@
 		7024E49E2A4A03D7005A5BF9 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E49C2A4A03D7005A5BF9 /* Food.swift */; };
 		7024E4A12A4A044E005A5BF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4A02A4A044E005A5BF9 /* Constants.swift */; };
 		7024E4A22A4A044E005A5BF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4A02A4A044E005A5BF9 /* Constants.swift */; };
+		702FC7902A53333800C8FBF3 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702FC78F2A53333800C8FBF3 /* FoodCell.swift */; };
 		704F59D82A4A0C8300F7B3F1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59D72A4A0C8300F7B3F1 /* Meal.swift */; };
 		704F59D92A4A0C8300F7B3F1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59D72A4A0C8300F7B3F1 /* Meal.swift */; };
 		704F59DB2A4A14B700F7B3F1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59DA2A4A14B700F7B3F1 /* Day.swift */; };
@@ -49,7 +50,7 @@
 /* Begin PBXFileReference section */
 		7024E46D2A4A02E8005A5BF9 /* My Nutrition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Nutrition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7024E4702A4A02E8005A5BF9 /* My_NutritionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_NutritionApp.swift; sourceTree = "<group>"; };
-		7024E4722A4A02E8005A5BF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7024E4722A4A02E8005A5BF9 /* AddMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealView.swift; sourceTree = "<group>"; };
 		7024E4742A4A02EA005A5BF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7024E4772A4A02EA005A5BF9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7024E4792A4A02EA005A5BF9 /* My_Nutrition.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = My_Nutrition.entitlements; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		7024E48E2A4A02EB005A5BF9 /* My_NutritionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_NutritionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7024E49C2A4A03D7005A5BF9 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		7024E4A02A4A044E005A5BF9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		702FC78F2A53333800C8FBF3 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		704F59D72A4A0C8300F7B3F1 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		704F59DA2A4A14B700F7B3F1 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		708E79472A5324F800F628A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -117,9 +119,8 @@
 			children = (
 				7024E49F2A4A043C005A5BF9 /* Utility */,
 				7024E49B2A4A033C005A5BF9 /* Models */,
+				702FC78E2A53330C00C8FBF3 /* Views */,
 				7024E4702A4A02E8005A5BF9 /* My_NutritionApp.swift */,
-				7024E4722A4A02E8005A5BF9 /* ContentView.swift */,
-				708E79472A5324F800F628A5 /* HomeView.swift */,
 				7024E4742A4A02EA005A5BF9 /* Assets.xcassets */,
 				7024E4792A4A02EA005A5BF9 /* My_Nutrition.entitlements */,
 				7024E4762A4A02EA005A5BF9 /* Preview Content */,
@@ -170,6 +171,16 @@
 				70E506AC2A4A43D900B75572 /* Global.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		702FC78E2A53330C00C8FBF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				708E79472A5324F800F628A5 /* HomeView.swift */,
+				7024E4722A4A02E8005A5BF9 /* AddMealView.swift */,
+				702FC78F2A53333800C8FBF3 /* FoodCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,11 +315,12 @@
 			files = (
 				708E79482A5324F800F628A5 /* HomeView.swift in Sources */,
 				704F59D82A4A0C8300F7B3F1 /* Meal.swift in Sources */,
-				7024E4732A4A02E8005A5BF9 /* ContentView.swift in Sources */,
+				7024E4732A4A02E8005A5BF9 /* AddMealView.swift in Sources */,
 				704F59DB2A4A14B700F7B3F1 /* Day.swift in Sources */,
 				7024E4712A4A02E8005A5BF9 /* My_NutritionApp.swift in Sources */,
 				7024E49D2A4A03D7005A5BF9 /* Food.swift in Sources */,
 				7024E4A12A4A044E005A5BF9 /* Constants.swift in Sources */,
+				702FC7902A53333800C8FBF3 /* FoodCell.swift in Sources */,
 				708EFBD32A4B36EE00E69F9B /* Predictor.swift in Sources */,
 				70E506AD2A4A43D900B75572 /* Global.swift in Sources */,
 			);

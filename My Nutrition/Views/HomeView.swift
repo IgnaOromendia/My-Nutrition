@@ -10,10 +10,14 @@ import SwiftUI
 struct HomeView: View {
     
     var body: some View {
-        VStack {
-            Button("Add meal") {
-                
-                
+        NavigationView {
+            VStack {
+                NavigationLink(destination: AddMealView()) {
+                    Text("Add Meal")
+                }
+                NavigationLink(destination: AddMealView()) {
+                    Text("Ver comidas")
+                }
             }
         }
     }
