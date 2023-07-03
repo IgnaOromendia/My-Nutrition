@@ -99,11 +99,16 @@ struct ContentView: View {
                     
                     // Table view
                     List(foods, id: \.id) { food in
-                        FoodCell(name: food.name(), type: food.type())
+                        FoodCell(name: food.name(), amount: food.amount(), type: food.type())
                             .listRowSeparator(.hidden)
                     }
                     .scrollContentBackground(.hidden)
+                    
+                    // Space
                     Spacer()
+                    
+                    // Button
+                    
                 }
             }
         }
@@ -113,11 +118,13 @@ struct ContentView: View {
 // TODO: PONER EN OTRO ARCHIVO
 struct FoodCell: View {
     var name: String
+    var amount: Int
     var type: FoodType
     
     var body: some View {
         HStack {
-            Text(name)
+            var text = amount > 1 ? "\(amount) x " + name : name
+            Text(text)
                 .font(.system(size: 19))
                 .bold()
                 .foregroundColor(type_color(type.rawValue).0)
@@ -134,7 +141,7 @@ func type_color(_ type: Int) -> (Color,Color){ // Background, TextColor
     case 2:
         return (.green, .white)
     default:
-        return (.white, .black)
+        return (.black, .white)
     }
 }
 
