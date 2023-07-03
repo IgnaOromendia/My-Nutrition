@@ -10,8 +10,8 @@ import Foundation
 class Meal: Equatable, Codable {
     
     // Variables
-    private var _foods  : [Food] = []
-    private var _counter: [Int]  = [0,0,0]
+    private var _foods  : [Food]
+    private var _counter: [Int]
     
     
     // Equtable
@@ -23,6 +23,10 @@ class Meal: Equatable, Codable {
     init(foods: [Food]) {
         self._foods = foods
         self._counter = [0,0,0]
+    }
+    
+    convenience init() {
+        self.init(foods: [])
     }
     
     // MARK: - GETs
