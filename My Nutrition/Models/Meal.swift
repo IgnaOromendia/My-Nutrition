@@ -52,7 +52,7 @@ class Meal: Equatable, CustomStringConvertible, Codable {
     func most_used_type() -> FoodType {
         let max_food = max(_counter[0], _counter[1], _counter[2], 0)
         if max_food == _counter[0] {return .protein}
-        if max_food == _counter[1] {return .carboohydrates}
+        if max_food == _counter[1] {return .carbohydrates}
         return .vegetables
     }
     

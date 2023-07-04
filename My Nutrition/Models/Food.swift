@@ -73,7 +73,7 @@ class Food: CustomStringConvertible, Equatable, Comparable, Codable, Hashable, I
             return .accentColor
         case .protein:
             return .orange
-        case .carboohydrates:
+        case .carbohydrates:
             return .yellow
         case .vegetables:
             return .green
