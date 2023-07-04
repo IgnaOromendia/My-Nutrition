@@ -18,7 +18,7 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
-            NavigationLink("Add \(recommendedMoment) Meal") {
+            NavigationLink("Add \(recommendedMoment)") {
                 AddMealView(moment: moment, foods: current_week[today.weekDay].mealFrom(moment).foods())
             }
         }
