@@ -49,16 +49,16 @@ enum DayMoment: Int, Codable {
 func passMomentToString(_ moment: DayMoment) -> String {
     switch moment {
     case .breakfast:
-        return "breakfast"
+        return "Breakfast"
     case .collation1:
-        return "collation"
+        return "Collation"
     case .lunch:
-        return "lunch"
+        return "Lunch"
     case .snack:
-        return "snack"
+        return "Snack"
     case .collation2:
-        return "collation"
+        return "Collation"
     case .dinner:
-        return "dinner"
+        return "Dinner"
     }
 }
