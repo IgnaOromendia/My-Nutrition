@@ -11,7 +11,7 @@ import SwiftUI
 class Food: CustomStringConvertible, Equatable, Comparable, Codable, Hashable, Identifiable {
     
     // Variables
-    let id: String
+    let id           : String
     private var _name: String
     private var _type: FoodType
     private var _amount: Int

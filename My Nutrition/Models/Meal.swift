@@ -7,9 +7,10 @@
 
 import Foundation
 
-class Meal: Equatable, CustomStringConvertible, Codable {
+class Meal: Equatable, CustomStringConvertible, Codable, Identifiable {
     
     // Variables
+    let id              : String
     private var _foods  : [Food]
     private var _counter: [Int]
     
@@ -23,6 +24,7 @@ class Meal: Equatable, CustomStringConvertible, Codable {
     init(foods: [Food]) {
         self._foods = foods
         self._counter = [0,0,0]
+        self.id = UUID().uuidString
     }
     
     convenience init() {
