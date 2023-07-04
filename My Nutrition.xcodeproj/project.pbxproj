@@ -23,6 +23,7 @@
 		704F59D92A4A0C8300F7B3F1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59D72A4A0C8300F7B3F1 /* Meal.swift */; };
 		704F59DB2A4A14B700F7B3F1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59DA2A4A14B700F7B3F1 /* Day.swift */; };
 		704F59DC2A4A14B700F7B3F1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59DA2A4A14B700F7B3F1 /* Day.swift */; };
+		708346A92A54BA9300EB26AD /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708346A82A54BA9300EB26AD /* Date.swift */; };
 		708E79482A5324F800F628A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708E79472A5324F800F628A5 /* HomeView.swift */; };
 		708EFBD32A4B36EE00E69F9B /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708EFBD22A4B36EE00E69F9B /* Predictor.swift */; };
 		708EFBD42A4B36EE00E69F9B /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708EFBD22A4B36EE00E69F9B /* Predictor.swift */; };
@@ -64,6 +65,7 @@
 		702FC78F2A53333800C8FBF3 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		704F59D72A4A0C8300F7B3F1 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		704F59DA2A4A14B700F7B3F1 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		708346A82A54BA9300EB26AD /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		708E79472A5324F800F628A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		708EFBD22A4B36EE00E69F9B /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
 		70E506AC2A4A43D900B75572 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				7024E49F2A4A043C005A5BF9 /* Utility */,
+				708346A72A54BA8600EB26AD /* Extensions */,
 				7024E49B2A4A033C005A5BF9 /* Models */,
 				702FC78E2A53330C00C8FBF3 /* Views */,
 				7024E4702A4A02E8005A5BF9 /* My_NutritionApp.swift */,
@@ -181,6 +184,14 @@
 				702FC78F2A53333800C8FBF3 /* FoodCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		708346A72A54BA8600EB26AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				708346A82A54BA9300EB26AD /* Date.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 				7024E49D2A4A03D7005A5BF9 /* Food.swift in Sources */,
 				7024E4A12A4A044E005A5BF9 /* Constants.swift in Sources */,
 				702FC7902A53333800C8FBF3 /* FoodCell.swift in Sources */,
+				708346A92A54BA9300EB26AD /* Date.swift in Sources */,
 				708EFBD32A4B36EE00E69F9B /* Predictor.swift in Sources */,
 				70E506AD2A4A43D900B75572 /* Global.swift in Sources */,
 			);
