@@ -92,7 +92,7 @@ struct AddMealView: View {
                             Text("Carbohydrates").tag(1)
                             Text("Vegetables").tag(2)
                         }
-                        .colorMultiply(colorFoodType(FoodType(rawValue: type_f) ?? -1).0)
+                        .colorMultiply(colorFoodType(FoodType(rawValue: type_f) ?? .none).0)
                         .pickerStyle(.segmented)
                         // TODO: CHANGE TEXT COLOR;
                     }
