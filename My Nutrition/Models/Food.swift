@@ -11,13 +11,14 @@ import SwiftUI
 class Food: CustomStringConvertible, Equatable, Comparable, Codable, Hashable, Identifiable {
     
     // Variables
-    let id = UUID()
+    let id: String
     private var _name: String
     private var _type: FoodType
     private var _amount: Int
     
     // Constructor
     init(name: String, type: FoodType, amount: Int = 1) {
+        self.id = UUID().uuidString
         self._name = name
         self._type = type
         self._amount = amount

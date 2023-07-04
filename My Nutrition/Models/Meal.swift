@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Meal: Equatable, Codable {
+class Meal: Equatable, CustomStringConvertible, Codable {
     
     // Variables
     private var _foods  : [Food]
@@ -27,6 +27,13 @@ class Meal: Equatable, Codable {
     
     convenience init() {
         self.init(foods: [])
+    }
+    
+    var description: String {
+        return """
+        \(_foods)
+        \(_counter)\n
+        """
     }
     
     // MARK: - GETs

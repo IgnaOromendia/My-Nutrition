@@ -7,7 +7,7 @@
 
 /*  Passing Data
     @State more global, used in master view
-    @Binfing used in any view where you want to pass the data
+    @Binding used in any view where you want to pass the data
     
     Example (Wiki app):
         -- Master view --
@@ -39,10 +39,15 @@
 
 import SwiftUI
 
+// TODO: HACER QUE SE PUEDA PASAR LAS COMIDAS Y ADEMÁS SE PUEDAN EDITAR
+
 struct AddMealView: View {
     
-    @State var moment: DayMoment = .breakfast
-    @State private var foods: [Food] = [Food(name: "Carne", type: .protein), Food(name: "Ensalada de lechuga", type: .vegetables)]
+    @Environment(\.dismiss) private var dismiss
+    
+    var moment: DayMoment
+    
+    @State private var foods: [Food] = []
     @State private var name = ""
     @State private var type_b = false
     @State private var type_f = 0
@@ -59,7 +64,6 @@ struct AddMealView: View {
                         .font(.system(size: 35))
                         .bold()
                         .padding()
-                    
                     // Text fields
                     TextField("Name", text: $name)
                         .font(.system(size: 20))
@@ -91,9 +95,12 @@ struct AddMealView: View {
                     // Button
                     Button("Add Food") {
                         if (!type_b) {type_f = -1}
-                        foods.append(Food(name: name, type: FoodType(rawValue: type_f)!, amount: Int(amount) ?? 1))
-                        name = ""
-                        type_b = false
+                        let food = Food(name: name, type: FoodType(rawValue: type_f)!, amount: Int(amount) ?? 1)
+                        
+                        foods.append(food)          // Show in list
+                        addFood(food, on: moment)   // Add to the object
+                        
+                        resetTextFields()
                     }
                     .padding(10)
                     .buttonStyle(.borderedProminent)
@@ -110,35 +117,46 @@ struct AddMealView: View {
                     Spacer()
                     
                     // Button
-//                    NavigationLink(destination: HomeView()) {
-//                        let today = 0 // TODO: Func that gets the day
-//                        current_week[today].add_meal(Meal(foods: foods), on: moment)
-//                        Text("Add Meal")
-//                    }
-//                    .padding(10)
-//                    .buttonStyle(.borderedProminent)
-//                    .tint(.teal)
+                    Button("Finish") {
+                        dismiss()
+                    }
+                    .padding(10)
+                    .buttonStyle(.borderedProminent)
+                    .tint(.teal)
                 }
             }
         }
     }
-}
-
-func type_color(_ type: Int) -> (Color,Color){ // Background, TextColor
-    switch type {
-    case 0:
-        return (.orange, .white)
-    case 1:
-        return (.yellow, .black)
-    case 2:
-        return (.green, .white)
-    default:
-        return (.black, .white)
+    
+    private func resetTextFields() {
+        name = ""
+        amount = ""
+        type_b = false
+        type_f = 0
     }
+    
+    private func type_color(_ type: Int) -> (Color,Color){ // Background, TextColor
+        switch type {
+        case 0:
+            return (.orange, .white)
+        case 1:
+            return (.yellow, .black)
+        case 2:
+            return (.green, .white)
+        default:
+            return (.black, .white)
+        }
+    }
+    
+    private func addFood(_ food: Food, on moment: DayMoment) {
+        let today = 0
+        current_week[today].addFood(food, on: moment)
+    }
+    
 }
 
 struct AddMealView_Preview: PreviewProvider {
     static var previews: some View {
-        AddMealView()
+        AddMealView(moment: .breakfast)
     }
 }

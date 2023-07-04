@@ -51,12 +51,12 @@ class Day: Equatable, Codable {
     }
     
     /// Return all meals
-    func all_meals() -> [Meal] {
+    func allMeals() -> [Meal] {
         return _meals
     }
     
     /// Returns all meals non empty
-    func all_meals_with_food() -> [Meal] {
+    func allMealsWithFood() -> [Meal] {
         var res: [Meal] = []
         for _meal in _meals {
             if _meal.has_food() {res.append(_meal)}
@@ -65,19 +65,23 @@ class Day: Equatable, Codable {
     }
     
     // MARK: - SET
-    func add_meal(_ meal: Meal, on moment: DayMoment) {
+    func addMeal(_ meal: Meal, on moment: DayMoment) {
         _meals[moment.rawValue] = meal
+    }
+    
+    func addFood(_ food: Food, on moment: DayMoment) {
+        _meals[moment.rawValue].addFood(food)
     }
     
     // MARK: - DELETE
     
     /// Delete one meal at the moment specified
-    func delete_meal(on moment: DayMoment) {
+    func deleteMeal(on moment: DayMoment) {
         _meals[moment.rawValue].delete_all()
     }
     
     /// Delete all meals
-    func delete_all_meal() {
+    func deleteAllMeals() {
         for i in 0..._meals.count {
             _meals[i].delete_all()
         }

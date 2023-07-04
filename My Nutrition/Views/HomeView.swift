@@ -10,17 +10,16 @@ import SwiftUI
 struct HomeView: View {
     
     var body: some View {
-        NavigationView {
-            VStack {
-                NavigationLink(destination: AddMealView()) {
-                    Text("Add Meal")
-                }
-                NavigationLink(destination: AddMealView()) {
-                    Text("Ver comidas")
-                }
+        NavigationStack {
+            NavigationLink("Add Meal") {
+                AddMealView(moment: .breakfast)
+            }
+            .onAppear {
+                print(current_week[0].allMeals())
             }
         }
     }
+    
     
 }
 
