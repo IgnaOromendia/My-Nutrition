@@ -46,12 +46,17 @@ struct AddMealView: View {
     @Environment(\.dismiss) private var dismiss
     
     var moment: DayMoment
+    @State var foods: [Food] = []
     
-    @State private var foods: [Food] = []
     @State private var name = ""
     @State private var type_b = false
     @State private var type_f = 0
     @State private var amount = ""
+    
+    init(moment: DayMoment, foods: [Food]) {
+        self.moment = moment
+        self.foods = foods
+    }
     
     var body: some View {
         NavigationView {
@@ -149,14 +154,13 @@ struct AddMealView: View {
     }
     
     private func addFood(_ food: Food, on moment: DayMoment) {
-        let today = 0
-        current_week[today].addFood(food, on: moment)
+        current_week[today.weekDay].addFood(food, on: moment)
     }
     
 }
 
 struct AddMealView_Preview: PreviewProvider {
     static var previews: some View {
-        AddMealView(moment: .breakfast)
+        AddMealView(moment: .breakfast, foods: [])
     }
 }

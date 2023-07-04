@@ -60,6 +60,7 @@ extension Date {
         }
     }
     
+    /// Return a moment depending on the hour
     var moment: DayMoment {
         // TODO: WOULD BE NICE IF IT LEARNS FROM ROUTINE THE OF THE USERS
         switch Date().hour {

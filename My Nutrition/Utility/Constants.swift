@@ -5,6 +5,11 @@
 //  Created by Igna on 26/06/2023.
 //
 
+import Foundation
+
+// Variables
+var today = Date()
+
 // Typealias
 
 typealias Week = Array<Day>
@@ -25,4 +30,21 @@ enum DayMoment: Int, Codable {
     case snack       = 3
     case collation2  = 4
     case dinner      = 5
+}
+
+func passMomentToString(_ moment: DayMoment) -> String {
+    switch moment {
+    case .breakfast:
+        return "breakfast"
+    case .collation1:
+        return "collation"
+    case .lunch:
+        return "lunch"
+    case .snack:
+        return "snack"
+    case .collation2:
+        return "collation"
+    case .dinner:
+        return "dinner"
+    }
 }

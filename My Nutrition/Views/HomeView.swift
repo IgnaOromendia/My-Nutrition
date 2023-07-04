@@ -9,13 +9,17 @@ import SwiftUI
 
 struct HomeView: View {
     
+    private var recommendedMoment: String
+    private var moment = Date().moment
+    
+    init() {
+        self.recommendedMoment = passMomentToString(moment)
+    }
+    
     var body: some View {
         NavigationStack {
-            NavigationLink("Add Meal") {
-                AddMealView(moment: Date().moment)
-            }
-            .onAppear {
-                print(current_week[0].allMeals())
+            NavigationLink("Add \(recommendedMoment) Meal") {
+                AddMealView(moment: moment, foods: current_week[today.weekDay].mealFrom(moment).foods())
             }
         }
     }
