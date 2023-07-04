@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 // Variables
 var today = Date()
@@ -19,8 +20,21 @@ typealias Week = Array<Day>
 enum FoodType: Int, Codable {
     case none           = -1
     case protein        = 0
-    case carboohydrates = 1
+    case carbohydrates = 1
     case vegetables     = 2
+}
+
+func colorFoodType(_ type: FoodType) -> (Color,Color){ // Background, TextColor
+    switch type {
+    case .protein:
+        return (.orange, .white)
+    case .carbohydrates:
+        return (.yellow, .black)
+    case .vegetables:
+        return (.green, .white)
+    default:
+        return (.black, .white)
+    }
 }
 
 enum DayMoment: Int, Codable {

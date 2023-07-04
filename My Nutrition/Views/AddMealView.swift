@@ -92,7 +92,7 @@ struct AddMealView: View {
                             Text("Carbohydrates").tag(1)
                             Text("Vegetables").tag(2)
                         }
-                        .colorMultiply(type_color(type_f).0)
+                        .colorMultiply(colorFoodType(FoodType(rawValue: type_f) ?? -1).0)
                         .pickerStyle(.segmented)
                         // TODO: CHANGE TEXT COLOR;
                     }
@@ -138,19 +138,6 @@ struct AddMealView: View {
         amount = ""
         type_b = false
         type_f = 0
-    }
-    
-    private func type_color(_ type: Int) -> (Color,Color){ // Background, TextColor
-        switch type {
-        case 0:
-            return (.orange, .white)
-        case 1:
-            return (.yellow, .black)
-        case 2:
-            return (.green, .white)
-        default:
-            return (.black, .white)
-        }
     }
     
     private func addFood(_ food: Food, on moment: DayMoment) {

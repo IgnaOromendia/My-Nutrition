@@ -18,7 +18,7 @@ struct FoodCell: View {
             Text(text)
                 .font(.system(size: 19))
                 .bold()
-                .foregroundColor(type_color(type.rawValue).0)
+                .foregroundColor(colorFoodType(type).0)
         }
     }
 }
