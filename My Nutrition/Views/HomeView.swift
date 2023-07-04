@@ -12,7 +12,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             NavigationLink("Add Meal") {
-                AddMealView(moment: .breakfast)
+                AddMealView(moment: Date().moment)
             }
             .onAppear {
                 print(current_week[0].allMeals())
