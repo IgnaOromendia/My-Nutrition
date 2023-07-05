@@ -113,7 +113,7 @@ struct AddMealView: View {
                     
                     // Table view
                     List(foods, id: \.id) { food in
-                        FoodCell(name: food.name(), amount: food.amount(), type: food.type())
+                        FoodCell(of: food)
                             .listRowSeparator(.hidden)
                     }
                     .scrollContentBackground(.hidden)
