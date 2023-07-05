@@ -20,7 +20,7 @@ typealias Week = Array<Day>
 enum FoodType: Int, Codable {
     case none           = -1
     case protein        = 0
-    case carbohydrates = 1
+    case carbohydrates  = 1
     case vegetables     = 2
 }
 

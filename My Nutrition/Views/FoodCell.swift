@@ -8,29 +8,23 @@
 import SwiftUI
 
 struct FoodCell: View {
-    var name: String
-    var amount: Int
-    var type: FoodType
+    let food: Food
     
     init(name: String, amount: Int, type: FoodType) {
-        self.name = name
-        self.amount = amount
-        self.type = type
+        self.food = Food(name: name, type: type, amount: amount)
     }
     
     init(of food: Food) {
-        self.name = food.name()
-        self.amount = food.amount()
-        self.type = food.type()
+        self.food = food
     }
     
     var body: some View {
         HStack {
-            let text = amount > 1 ? "\(amount) x " + name : name
+            let text = food.amount() > 1 ? "\(food.amount()) x " + food.name() : food.name()
             Text(text)
                 .font(.system(size: 19))
                 .bold()
-                .foregroundColor(colorFoodType(type).0)
+                .foregroundColor(food.associatedColorType())
         }
     }
 }
