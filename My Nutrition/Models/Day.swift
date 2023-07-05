@@ -29,7 +29,12 @@ class Day: Equatable, Codable {
     }
     
     convenience init(date: Date) {
-        let m: [Meal] = [Meal(), Meal(), Meal(), Meal(), Meal(), Meal()]
+        let m: [Meal] = [Meal(moment: .breakfast),
+                         Meal(moment: .collation1),
+                         Meal(moment: .lunch),
+                         Meal(moment: .collation2),
+                         Meal(moment: .snack),
+                         Meal(moment: .dinner)]
         self.init(meals: m, date: date)
     }
     

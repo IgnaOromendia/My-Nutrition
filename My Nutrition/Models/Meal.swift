@@ -13,6 +13,7 @@ class Meal: Equatable, CustomStringConvertible, Codable, Identifiable {
     let id              : String
     private var _foods  : [Food]
     private var _counter: [Int]
+    private var _moment : DayMoment
     
     
     // Equtable
@@ -21,20 +22,22 @@ class Meal: Equatable, CustomStringConvertible, Codable, Identifiable {
     }
     
     // Constructor
-    init(foods: [Food]) {
+    init(foods: [Food], moment: DayMoment) {
         self._foods = foods
         self._counter = [0,0,0]
+        self._moment = moment
         self.id = UUID().uuidString
     }
     
-    convenience init() {
-        self.init(foods: [])
+    convenience init(moment: DayMoment) {
+        self.init(foods: [], moment: moment)
     }
     
     var description: String {
         return """
         \(_foods)
-        \(_counter)\n
+        \(_counter)
+        \(passMomentToString(_moment))\n
         """
     }
     
@@ -48,6 +51,14 @@ class Meal: Equatable, CustomStringConvertible, Codable, Identifiable {
     /// Returns true if contains food
     func has_food() -> Bool {
         return _foods.isEmpty
+    }
+    
+    func moment() -> DayMoment {
+        return _moment
+    }
+    
+    func momentString() -> String {
+        return passMomentToString(_moment)
     }
     
     /// Returns the mos udes food type
