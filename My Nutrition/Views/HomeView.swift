@@ -21,6 +21,7 @@ struct HomeView: View {
             NavigationLink("Add \(recommendedMoment)") {
                 AddMealView(moment: moment, foods: current_week[today.weekDay].mealFrom(moment).foods())
             }
+            .padding(10)
             // TODO: CHOOSE A WAY OF SELECTING WHICH MOMENT DO THE USER WANT TO ADD THE MEAL
 //            NavigationLink("Add Meal") {
 //                AddMealView(moment: moment, foods: current_week[today.weekDay].mealFrom(moment).foods())
@@ -28,7 +29,13 @@ struct HomeView: View {
             NavigationLink("Meals of this week") {
                 MealsVew()
             }
+            .padding(10)
+            NavigationLink("My Goals") {
+                GoalsView()
+            }
+            .padding(10)
         }
+        .tint(.black)
     }
     
     

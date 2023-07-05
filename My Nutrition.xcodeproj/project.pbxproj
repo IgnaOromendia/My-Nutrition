@@ -23,6 +23,11 @@
 		704F59D92A4A0C8300F7B3F1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59D72A4A0C8300F7B3F1 /* Meal.swift */; };
 		704F59DB2A4A14B700F7B3F1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59DA2A4A14B700F7B3F1 /* Day.swift */; };
 		704F59DC2A4A14B700F7B3F1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59DA2A4A14B700F7B3F1 /* Day.swift */; };
+		706862BE2A55B64600FEAAEA /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706862BD2A55B64600FEAAEA /* Goal.swift */; };
+		706862BF2A55B64600FEAAEA /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706862BD2A55B64600FEAAEA /* Goal.swift */; };
+		706862C12A55BA0C00FEAAEA /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706862C02A55BA0C00FEAAEA /* GoalsView.swift */; };
+		706862C42A55C20A00FEAAEA /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706862C32A55C20A00FEAAEA /* GoalCell.swift */; };
+		706862C62A55C6D700FEAAEA /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706862C52A55C6D700FEAAEA /* ProgressView.swift */; };
 		708346A92A54BA9300EB26AD /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708346A82A54BA9300EB26AD /* Date.swift */; };
 		708346AB2A54C89A00EB26AD /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708346AA2A54C89A00EB26AD /* MealsView.swift */; };
 		708E79482A5324F800F628A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708E79472A5324F800F628A5 /* HomeView.swift */; };
@@ -66,6 +71,10 @@
 		702FC78F2A53333800C8FBF3 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		704F59D72A4A0C8300F7B3F1 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		704F59DA2A4A14B700F7B3F1 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		706862BD2A55B64600FEAAEA /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		706862C02A55BA0C00FEAAEA /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		706862C32A55C20A00FEAAEA /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		706862C52A55C6D700FEAAEA /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		708346A82A54BA9300EB26AD /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		708346AA2A54C89A00EB26AD /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
 		708E79472A5324F800F628A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -165,6 +174,7 @@
 				704F59D72A4A0C8300F7B3F1 /* Meal.swift */,
 				704F59DA2A4A14B700F7B3F1 /* Day.swift */,
 				708EFBD22A4B36EE00E69F9B /* Predictor.swift */,
+				706862BD2A55B64600FEAAEA /* Goal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,18 +191,29 @@
 		702FC78E2A53330C00C8FBF3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				706862C22A55C1F600FEAAEA /* Cells */,
 				708E79472A5324F800F628A5 /* HomeView.swift */,
 				7024E4722A4A02E8005A5BF9 /* AddMealView.swift */,
-				702FC78F2A53333800C8FBF3 /* FoodCell.swift */,
 				708346AA2A54C89A00EB26AD /* MealsView.swift */,
+				706862C02A55BA0C00FEAAEA /* GoalsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		706862C22A55C1F600FEAAEA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				702FC78F2A53333800C8FBF3 /* FoodCell.swift */,
+				706862C32A55C20A00FEAAEA /* GoalCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		708346A72A54BA8600EB26AD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				708346A82A54BA9300EB26AD /* Date.swift */,
+				706862C52A55C6D700FEAAEA /* ProgressView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -335,8 +356,12 @@
 				7024E49D2A4A03D7005A5BF9 /* Food.swift in Sources */,
 				7024E4A12A4A044E005A5BF9 /* Constants.swift in Sources */,
 				702FC7902A53333800C8FBF3 /* FoodCell.swift in Sources */,
+				706862C42A55C20A00FEAAEA /* GoalCell.swift in Sources */,
+				706862BE2A55B64600FEAAEA /* Goal.swift in Sources */,
 				708346A92A54BA9300EB26AD /* Date.swift in Sources */,
 				708EFBD32A4B36EE00E69F9B /* Predictor.swift in Sources */,
+				706862C12A55BA0C00FEAAEA /* GoalsView.swift in Sources */,
+				706862C62A55C6D700FEAAEA /* ProgressView.swift in Sources */,
 				70E506AD2A4A43D900B75572 /* Global.swift in Sources */,
 				708346AB2A54C89A00EB26AD /* MealsView.swift in Sources */,
 			);
@@ -346,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706862BF2A55B64600FEAAEA /* Goal.swift in Sources */,
 				704F59D92A4A0C8300F7B3F1 /* Meal.swift in Sources */,
 				7024E4832A4A02EB005A5BF9 /* My_NutritionTests.swift in Sources */,
 				70E506AE2A4A43D900B75572 /* Global.swift in Sources */,
