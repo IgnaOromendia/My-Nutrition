@@ -67,7 +67,7 @@ class Food: CustomStringConvertible, Equatable, Comparable, Codable, Hashable, I
     }
     
     /// Returns the color depending on the food type
-    func associated_color_type() -> Color {
+    func associatedColorType() -> Color {
         switch _type {
         case .none:
             return .accentColor
