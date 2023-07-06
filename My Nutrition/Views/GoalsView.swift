@@ -10,14 +10,6 @@ import SwiftUI
 
 struct GoalsView: View {
     
-    init() {
-        goals = [Goal(progress: 10,title: "Goal A"),
-                 Goal(progress: 30, title: "Goal B"),
-                 Goal(progress: 50, title: "Goal C"),
-                 Goal(progress: 70, title: "Goal D"),
-                 Goal(progress: 90, title: "Goal E")]
-    }
-    
     var body: some View {
         NavigationView {
             ZStack {
@@ -28,6 +20,15 @@ struct GoalsView: View {
                     GoalCell(goal: goal)
                 }
                 .scrollContentBackground(.hidden)
+                .toolbar {
+                    NavigationLink(destination: {
+                        // Destination view
+                    }, label: {
+                        Image(systemName: "Add")
+                    })
+                    .tint(.black)
+                }
+                    
                 
             }
         }

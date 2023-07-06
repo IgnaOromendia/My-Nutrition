@@ -17,11 +17,29 @@ typealias Week = Array<Day>
 
 // Enums
 
+enum GoalType: Int, Codable {
+    case A = 0
+    case B = 1
+}
+
 enum FoodType: Int, Codable {
     case none           = -1
     case protein        = 0
     case carbohydrates  = 1
     case vegetables     = 2
+}
+
+func passFoodTypeToString(_ type: FoodType) -> String {
+    switch type {
+    case .protein:
+        return "Protein"
+    case .carbohydrates:
+        return "Carbohydrates"
+    case .vegetables:
+        return "Vegetables"
+    case .none:
+        return "Nonde"
+    }
 }
 
 func colorFoodType(_ type: FoodType) -> (Color,Color){ // Background, TextColor
