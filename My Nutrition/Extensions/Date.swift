@@ -50,10 +50,12 @@ extension Date {
     /// Returns the date but if it's equal to today, retruns "today" and similar with "yesterday"
     var prettyDate: String {
         get {
-            if self.comparableDate == Date().comparableDate {
+            if self.comparableDate == today.comparableDate {
                 return "Today"
-            } else if self.comparableDate == (Date() - TimeInterval(86400)).comparableDate {
+            } else if self.comparableDate == (today - TimeInterval(86400)).comparableDate {
                 return "Yesterady"
+            } else if self.comparableDate == (today + TimeInterval(86400)).comparableDate {
+                return "Tomorrow"
             } else {
                 return self.dayMonthDate
             }

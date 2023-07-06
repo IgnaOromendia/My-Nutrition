@@ -9,8 +9,8 @@ import Foundation
 
 func initWeek() -> Week{
     var res: Week = []
-    for _ in 0..<7 {
-        res.append(Day(date: Date()))
+    for i in 0..<7 {
+        res.append(Day(date: Date() + TimeInterval(i * 86400)))
     }
     return res
 }

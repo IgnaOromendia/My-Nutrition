@@ -16,14 +16,16 @@ import Foundation
  Dinner     = 5
  */
 
-class Day: Equatable, Codable {
+class Day: Equatable, Codable, Identifiable {
     
     // Variables
-    private var _date: Date
-    private var _meals: [Meal] = []
+    let id              :String
+    private var _date   :Date
+    private var _meals  :[Meal] = []
     
     // Constructor
     init(meals: [Meal], date: Date) {
+        id = UUID().uuidString
         _date = date
         _meals = meals
     }

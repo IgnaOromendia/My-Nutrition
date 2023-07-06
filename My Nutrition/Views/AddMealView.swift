@@ -74,11 +74,14 @@ struct AddMealView: View {
                         .font(.system(size: 20))
                         .foregroundColor(.black)
                         .padding()
+                        .submitLabel(.done)
                     
                     TextField("Amount (1)", text: $amount)
                         .font(.system(size: 20))
                         .foregroundColor(.black)
                         .padding()
+                        .keyboardType(.decimalPad)
+                        .submitLabel(.done)
                     
                     // Switch
                     Toggle("Add Food Type", isOn: $type_b)
@@ -103,7 +106,7 @@ struct AddMealView: View {
                         let food = Food(name: name, type: FoodType(rawValue: type_f)!, amount: Int(amount) ?? 1)
                         
                         foods.append(food)          // Show in list
-                        addFood(food, on: moment)   // Add to the object
+                        current_week[today.weekDay].addFood(food, on: moment)   // Add to the object
                         
                         resetTextFields()
                     }
@@ -138,10 +141,6 @@ struct AddMealView: View {
         amount = ""
         type_b = false
         type_f = 0
-    }
-    
-    private func addFood(_ food: Food, on moment: DayMoment) {
-        current_week[today.weekDay].addFood(food, on: moment)
     }
     
 }

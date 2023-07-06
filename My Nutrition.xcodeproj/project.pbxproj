@@ -33,6 +33,7 @@
 		708E79482A5324F800F628A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708E79472A5324F800F628A5 /* HomeView.swift */; };
 		708EFBD32A4B36EE00E69F9B /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708EFBD22A4B36EE00E69F9B /* Predictor.swift */; };
 		708EFBD42A4B36EE00E69F9B /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708EFBD22A4B36EE00E69F9B /* Predictor.swift */; };
+		70C1C10A2A573110008ECC40 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C1C1092A573110008ECC40 /* WeekView.swift */; };
 		70E506AD2A4A43D900B75572 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E506AC2A4A43D900B75572 /* Global.swift */; };
 		70E506AE2A4A43D900B75572 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E506AC2A4A43D900B75572 /* Global.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		708346AA2A54C89A00EB26AD /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
 		708E79472A5324F800F628A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		708EFBD22A4B36EE00E69F9B /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
+		70C1C1092A573110008ECC40 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		70E506AC2A4A43D900B75572 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +198,7 @@
 				7024E4722A4A02E8005A5BF9 /* AddMealView.swift */,
 				708346AA2A54C89A00EB26AD /* MealsView.swift */,
 				706862C02A55BA0C00FEAAEA /* GoalsView.swift */,
+				70C1C1092A573110008ECC40 /* WeekView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				704F59DB2A4A14B700F7B3F1 /* Day.swift in Sources */,
 				7024E4712A4A02E8005A5BF9 /* My_NutritionApp.swift in Sources */,
 				7024E49D2A4A03D7005A5BF9 /* Food.swift in Sources */,
+				70C1C10A2A573110008ECC40 /* WeekView.swift in Sources */,
 				7024E4A12A4A044E005A5BF9 /* Constants.swift in Sources */,
 				702FC7902A53333800C8FBF3 /* FoodCell.swift in Sources */,
 				706862C42A55C20A00FEAAEA /* GoalCell.swift in Sources */,
