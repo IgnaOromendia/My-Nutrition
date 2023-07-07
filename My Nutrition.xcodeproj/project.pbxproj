@@ -19,6 +19,7 @@
 		7024E4A12A4A044E005A5BF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4A02A4A044E005A5BF9 /* Constants.swift */; };
 		7024E4A22A4A044E005A5BF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024E4A02A4A044E005A5BF9 /* Constants.swift */; };
 		702FC7902A53333800C8FBF3 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702FC78F2A53333800C8FBF3 /* FoodCell.swift */; };
+		703640B72A5870040066BAD5 /* WeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703640B62A5870040066BAD5 /* WeekCell.swift */; };
 		704F59D82A4A0C8300F7B3F1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59D72A4A0C8300F7B3F1 /* Meal.swift */; };
 		704F59D92A4A0C8300F7B3F1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59D72A4A0C8300F7B3F1 /* Meal.swift */; };
 		704F59DB2A4A14B700F7B3F1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704F59DA2A4A14B700F7B3F1 /* Day.swift */; };
@@ -70,6 +71,7 @@
 		7024E49C2A4A03D7005A5BF9 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		7024E4A02A4A044E005A5BF9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		702FC78F2A53333800C8FBF3 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		703640B62A5870040066BAD5 /* WeekCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCell.swift; sourceTree = "<group>"; };
 		704F59D72A4A0C8300F7B3F1 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		704F59DA2A4A14B700F7B3F1 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		706862BD2A55B64600FEAAEA /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			children = (
 				702FC78F2A53333800C8FBF3 /* FoodCell.swift */,
 				706862C32A55C20A00FEAAEA /* GoalCell.swift */,
+				703640B62A5870040066BAD5 /* WeekCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				706862BE2A55B64600FEAAEA /* Goal.swift in Sources */,
 				708346A92A54BA9300EB26AD /* Date.swift in Sources */,
 				708EFBD32A4B36EE00E69F9B /* Predictor.swift in Sources */,
+				703640B72A5870040066BAD5 /* WeekCell.swift in Sources */,
 				706862C12A55BA0C00FEAAEA /* GoalsView.swift in Sources */,
 				706862C62A55C6D700FEAAEA /* ProgressView.swift in Sources */,
 				70E506AD2A4A43D900B75572 /* Global.swift in Sources */,

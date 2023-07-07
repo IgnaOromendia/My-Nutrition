@@ -17,7 +17,6 @@ struct WeekView: View {
                     Text(day.date().prettyDate)
                 }
             }.navigationTitle(current_week[0].date().dayMonthDate + " - " + current_week[6].date().dayMonthDate)
-            
         }
     }
     
