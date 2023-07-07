@@ -11,11 +11,15 @@ import SwiftUI
 struct WeekView: View {
     
     var body: some View {
-        VStack {
-            NavigationView {
+        ZStack {
+            LinearGradient(colors: [.green, .indigo], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .edgesIgnoringSafeArea(.all)
+            NavigationStack {
                 List(current_week) { day in
-                    Text(day.date().prettyDate)
-                }
+                    WeekCell(title: day.date().prettyDate, color: .magenta)
+                        .listRowSeparator(.hidden)
+                }// TODO: Sacar el background
+                .scrollContentBackground(.hidden)
             }.navigationTitle(current_week[0].date().dayMonthDate + " - " + current_week[6].date().dayMonthDate)
         }
     }
