@@ -10,6 +10,7 @@ import SwiftUI
 
 // Variables
 var today = Date()
+let oneDay: TimeInterval = 86400
 
 // Typealias
 

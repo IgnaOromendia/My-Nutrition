@@ -16,7 +16,7 @@ import Foundation
  Dinner     = 5
  */
 
-class Day: Equatable, Codable, Identifiable {
+class Day: Equatable, Codable, Identifiable, CustomStringConvertible {
     
     // Variables
     let id              :String
@@ -38,6 +38,10 @@ class Day: Equatable, Codable, Identifiable {
                          Meal(moment: .snack),
                          Meal(moment: .dinner)]
         self.init(meals: m, date: date)
+    }
+    
+    var description: String {
+        return "\(_date.dayMonthDate)"
     }
     
     // Equtable

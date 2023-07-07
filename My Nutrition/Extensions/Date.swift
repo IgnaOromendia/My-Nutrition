@@ -15,7 +15,7 @@ extension Date {
     
     /// Number of week day
     var weekDay: Int {
-        return Calendar.current.component(.weekday, from: self)
+        return Calendar.current.component(.weekday, from: self) - 2
     }
     
     /// Returns a string date with this fomrat: 12/12/2021
@@ -52,9 +52,9 @@ extension Date {
         get {
             if self.comparableDate == today.comparableDate {
                 return "Today"
-            } else if self.comparableDate == (today - TimeInterval(86400)).comparableDate {
+            } else if self.comparableDate == (today - oneDay).comparableDate {
                 return "Yesterady"
-            } else if self.comparableDate == (today + TimeInterval(86400)).comparableDate {
+            } else if self.comparableDate == (today + oneDay).comparableDate {
                 return "Tomorrow"
             } else {
                 return self.dayMonthDate

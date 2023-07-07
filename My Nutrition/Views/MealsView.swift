@@ -13,7 +13,8 @@ struct MealsVew: View {
     private var displayDay: Day
     
     init() {
-         self.displayDay = current_week[today.weekDay]
+        self.displayDay = current_week[today.weekDay]
+        print(current_week)
     }
     
     var body: some View {

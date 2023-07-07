@@ -8,10 +8,17 @@
 import Foundation
 
 func initWeek() -> Week{
+    let dayDifference = oneDay * Double(today.weekDay)
     var res: Week = []
-    for i in 0..<7 {
-        res.append(Day(date: Date() + TimeInterval(i * 86400)))
+    
+    for i in 0..<today.weekDay {
+        res.append(Day(date: (today - dayDifference) + oneDay * Double(i)))
     }
+    
+    for i in 0..<(7 - today.weekDay) {
+        res.append(Day(date: today + oneDay * Double(i)))
+    }
+    
     return res
 }
 
