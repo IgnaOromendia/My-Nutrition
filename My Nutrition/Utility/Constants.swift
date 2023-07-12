@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 
 // Variables
-var today = Date()
+let today = Date()
 let oneDay: TimeInterval = 86400
+let shareImage = "square.and.arrow.up"
 
 // Typealias
 

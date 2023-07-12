@@ -12,8 +12,8 @@ struct MealsVew: View {
         
     private var displayDay: Day
     
-    init() {
-        self.displayDay = current_week[today.weekDay]
+    init(day: Day) {
+        displayDay = day
     }
     
     var body: some View {
@@ -32,7 +32,6 @@ struct MealsVew: View {
                             .bold()
                             .foregroundColor(.black)
                     }
-                    //.listRowSeparator(.hidden)
                 }
                .scrollContentBackground(.hidden)
             }
@@ -43,6 +42,6 @@ struct MealsVew: View {
 
 struct MealsView_Preview: PreviewProvider {
     static var previews: some View {
-        MealsVew()
+        MealsVew(day: current_week[today.weekDay])
     }
 }

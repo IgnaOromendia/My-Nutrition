@@ -16,12 +16,31 @@ struct WeekView: View {
                 .edgesIgnoringSafeArea(.all)
             NavigationStack {
                 List(current_week) { day in
-                    WeekCell(title: day.date().prettyDate, color: .magenta)
+                    WeekCell(day: day, color: .clear) // TODO: CHANGE COLOR
                         .listRowSeparator(.hidden)
-                }// TODO: Sacar el background
+                        .listRowBackground(Color.clear)
+                }
                 .scrollContentBackground(.hidden)
-            }.navigationTitle(current_week[0].date().dayMonthDate + " - " + current_week[6].date().dayMonthDate)
+            }
+            .navigationTitle(current_week[0].date().dayMonthDate + " - " + current_week[6].date().dayMonthDate)
+            .toolbar {
+                Button {
+                    // Go to PDF manager
+                    print("PDF Manager")
+                } label: {
+                    //Text("Export")
+                    Image(systemName: shareImage)
+                }
+                .padding(20)
+                .tint(.white)
+            }
         }
     }
     
+}
+
+struct WeekView_Preview: PreviewProvider {
+    static var previews: some View {
+        WeekView()
+    }
 }

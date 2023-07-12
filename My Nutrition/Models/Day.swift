@@ -19,15 +19,21 @@ import Foundation
 class Day: Equatable, Codable, Identifiable, CustomStringConvertible {
     
     // Variables
-    let id              :String
-    private var _date   :Date
-    private var _meals  :[Meal] = []
+    let id                      :String
+    private var _date           :Date
+    private var _meals          :[Meal] = []
+    private var proteinPer      :Int
+    private var carbohdratesPer :Int
+    private var vegetablesPer   :Int
     
     // Constructor
     init(meals: [Meal], date: Date) {
         id = UUID().uuidString
         _date = date
         _meals = meals
+        proteinPer = 0
+        carbohdratesPer = 0
+        vegetablesPer = 0
     }
     
     convenience init(date: Date) {
@@ -75,13 +81,29 @@ class Day: Equatable, Codable, Identifiable, CustomStringConvertible {
         return res
     }
     
+    /// Returns de percentage requested
+    func foodPercentage(of type:FoodType) -> Int {
+        switch type {
+        case .protein:
+            return proteinPer
+        case .carbohydrates:
+            return carbohdratesPer
+        case .vegetables:
+            return vegetablesPer
+        case .none:
+            return 0
+        }
+    }
+    
     // MARK: - SET
     func addMeal(_ meal: Meal, on moment: DayMoment) {
         _meals[moment.rawValue] = meal
+        updatePercentages()
     }
     
     func addFood(_ food: Food, on moment: DayMoment) {
         _meals[moment.rawValue].addFood(food)
+        updatePercentages()
     }
     
     // MARK: - DELETE
@@ -89,6 +111,7 @@ class Day: Equatable, Codable, Identifiable, CustomStringConvertible {
     /// Delete one meal at the moment specified
     func deleteMeal(on moment: DayMoment) {
         _meals[moment.rawValue].delete_all()
+        updatePercentages()
     }
     
     /// Delete all meals
@@ -96,6 +119,30 @@ class Day: Equatable, Codable, Identifiable, CustomStringConvertible {
         for i in 0..._meals.count {
             _meals[i].delete_all()
         }
+        proteinPer = 0
+        carbohdratesPer = 0
+        vegetablesPer = 0
+    }
+    
+    // MARK: - AUXILIAR
+    
+    private func foodCount() -> [Int] {
+        var count = [0,0,0]
+        for meal in _meals {
+            let temp = meal.counter()
+            count[0] += temp[0]
+            count[1] += temp[1]
+            count[2] += temp[2]
+        }
+        return count
+    }
+    
+    private func updatePercentages() {
+        let typesCount = foodCount()
+        let totalCount = typesCount[0] + typesCount[1] + typesCount[2]
+        proteinPer      = (typesCount[FoodType.protein.rawValue]        * 100) / totalCount
+        carbohdratesPer = (typesCount[FoodType.carbohydrates.rawValue]  * 100) / totalCount
+        vegetablesPer   = (typesCount[FoodType.vegetables.rawValue]     * 100) / totalCount
     }
     
     

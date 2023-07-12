@@ -27,7 +27,7 @@ struct HomeView: View {
 //                AddMealView(moment: moment, foods: current_week[today.weekDay].mealFrom(moment).foods())
 //            }
             NavigationLink("Today's Meals") {
-                MealsVew()
+                MealsVew(day: current_week[today.weekDay])
             }
             .padding(10)
             NavigationLink("Week") {

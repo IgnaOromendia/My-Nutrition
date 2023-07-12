@@ -48,25 +48,37 @@ class Meal: Equatable, CustomStringConvertible, Codable, Identifiable {
         return _foods
     }
     
+    /// Returns the count of foods
+    func foodCount() -> Int {
+        return _foods.count
+    }
+    
     /// Returns true if contains food
     func has_food() -> Bool {
         return _foods.isEmpty
     }
     
+    /// Returns the moment of the meal
     func moment() -> DayMoment {
         return _moment
     }
     
+    /// Returns the moment of the meal as a String
     func momentString() -> String {
         return passMomentToString(_moment)
     }
     
-    /// Returns the mos udes food type
-    func most_used_type() -> FoodType {
+    /// Returns the most udes food type
+    func mostUsedType() -> FoodType {
         let max_food = max(_counter[0], _counter[1], _counter[2], 0)
         if max_food == _counter[0] {return .protein}
         if max_food == _counter[1] {return .carbohydrates}
         return .vegetables
+    }
+    
+    /// Returns the type counter
+    func counter() -> [Int] {
+        return _counter
     }
     
     // MARK: - SETs

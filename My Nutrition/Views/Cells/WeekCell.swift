@@ -8,31 +8,60 @@
 import Foundation
 import SwiftUI
 
+fileprivate let circleFrame: CGFloat = 23
+
 struct WeekCell: View {
-    var title: String
-    var color: UIColor
+    let title: String
+    let color: UIColor
+    let proteinPrecentage: Int
+    let carbohydratesPrecentage: Int
+    let vegetablesPrecentage: Int
+    let day: Day
+    
+    init(day: Day, color: UIColor) {
+        self.day                     = day
+        self.title                   = day.date().prettyDate
+        self.color                   = color
+        self.proteinPrecentage       = day.foodPercentage(of: .protein)
+        self.carbohydratesPrecentage = day.foodPercentage(of: .carbohydrates)
+        self.vegetablesPrecentage    = day.foodPercentage(of: .vegetables)
+    }
     
     var body: some View {
         ZStack {
-            Color(color)
-                .ignoresSafeArea()
+            LinearGradient(colors: [.blue, .indigo], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .edgesIgnoringSafeArea(.all)
                 .cornerRadius(20)
-            Text(title)
-                .padding(10)
+            VStack {
+                NavigationLink(title) {
+                    MealsVew(day: day)
+                }
+                .padding(.vertical, 10)
+                .padding(.horizontal, 40)
                 .font(.system(size: 20))
                 .bold()
-            // TODO: Boton de exportar, Porcentajes de tipos de comida
-            // - Para el exportar hacer un share (o algo q diga exportar)
-            // - Para los porcentajes estaría bueno una barra dividida en 4 colores
-            //   o un circulo con cada color representando el tipo y al lado un porcentaje
+                HStack {
+                    Spacer()
+                    Circle()
+                        .fill(.orange)
+                        .frame(width: circleFrame, height: circleFrame)
+                    Text("\(proteinPrecentage)%")
+                    Spacer()
+                    Circle()
+                        .fill(.yellow)
+                        .frame(width: circleFrame, height: circleFrame)
+                    Text("\(carbohydratesPrecentage)%")
+                    Spacer()
+                    Circle()
+                        .fill(.green)
+                        .frame(width: circleFrame, height: circleFrame)
+                    Text("\(vegetablesPrecentage)%")
+                    Spacer()
+                }
+                .padding(10)
+            }
         }
-        .padding(10)
+        .padding(5)
     }
     
-}
-
-struct WeekCell_Preview: PreviewProvider {
-    static var previews: some View {
-        WeekCell(title: "07/07", color: .green)
-    }
 }
