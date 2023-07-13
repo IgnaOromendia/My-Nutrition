@@ -38,6 +38,9 @@ struct MealsVew: View {
                 }
                 .scrollContentBackground(.hidden)
             }
+            .onDisappear {
+                current_week[displayDay.date().weekDay].updatePercentages()
+            }
             .navigationTitle(displayDay.date().prettyDate + "'s meals")
         }
     }

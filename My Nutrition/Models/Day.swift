@@ -108,6 +108,12 @@ class Day: Equatable, Codable, Identifiable, CustomStringConvertible {
     
     // MARK: - DELETE
     
+    /// Delete a food in a moment with offset
+    func deleteFood(atOffset offset: IndexSet, on momnet: DayMoment) {
+        _meals[momnet.rawValue].deleteFood(atOffsets: offset)
+        updatePercentages()
+    }
+    
     /// Delete one meal at the moment specified
     func deleteMeal(on moment: DayMoment) {
         _meals[moment.rawValue].deleteAll()
@@ -128,7 +134,7 @@ class Day: Equatable, Codable, Identifiable, CustomStringConvertible {
     
     private func foodCount() -> [Int] {
         var count = [0,0,0]
-        for meal in _meals {
+        for meal in _meals { // Max 6
             let temp = meal.counter()
             count[0] += temp[0]
             count[1] += temp[1]
@@ -137,7 +143,7 @@ class Day: Equatable, Codable, Identifiable, CustomStringConvertible {
         return count
     }
     
-    private func updatePercentages() {
+    func updatePercentages() {
         let typesCount = foodCount()
         let totalCount = typesCount[0] + typesCount[1] + typesCount[2]
         if totalCount > 0 {
@@ -145,6 +151,9 @@ class Day: Equatable, Codable, Identifiable, CustomStringConvertible {
             carbohdratesPer = (typesCount[FoodType.carbohydrates.rawValue]  * 100) / totalCount
             vegetablesPer   = (typesCount[FoodType.vegetables.rawValue]     * 100) / totalCount
         }
+        print(proteinPer)
+        print(carbohdratesPer)
+        print(vegetablesPer)
     }
     
     

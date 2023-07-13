@@ -39,8 +39,6 @@
 
 import SwiftUI
 
-// TODO: HACER QUE SE PUEDA PASAR LAS COMIDAS Y ADEMÁS SE PUEDAN EDITAR
-
 struct AddMealView: View {
     
     @Environment(\.dismiss) private var dismiss
@@ -105,7 +103,7 @@ struct AddMealView: View {
                         if (!type_b) {type_f = -1}
                         let food = Food(name: name, type: FoodType(rawValue: type_f)!, amount: Int(amount) ?? 1)
                         
-                        foods.append(food)          // Show in list
+                        foods.append(food)                                      // Show in list
                         current_week[today.weekDay].addFood(food, on: moment)   // Add to the object
                         
                         resetTextFields()
@@ -115,9 +113,14 @@ struct AddMealView: View {
                     .tint(.green)
                     
                     // Table view
-                    List(foods, id: \.id) { food in
-                        FoodCell(of: food)
-                            .listRowSeparator(.hidden)
+                    List {
+                        ForEach(foods) { food in
+                            FoodCell(of: food)
+                                .listRowSeparator(.hidden)
+                        }.onDelete { offsets in
+                            current_week[today.weekDay].deleteFood(atOffset: offsets, on: moment)
+                            foods.remove(atOffsets: offsets)
+                        }
                     }
                     .scrollContentBackground(.hidden)
                     

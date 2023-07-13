@@ -15,10 +15,16 @@ struct WeekView: View {
             LinearGradient(colors: [.green, .indigo], startPoint: .bottomTrailing, endPoint: .topLeading)
                 .edgesIgnoringSafeArea(.all)
             NavigationStack {
+                // TODO: PROBLEM when there is a delete in a meal in the mealview, the percentages do not refresh
                 List(current_week) { day in
                     WeekCell(day: day, color: .clear) // TODO: CHANGE COLOR
                         .listRowSeparator(.hidden)
                         .listRowBackground(Color.clear)
+                }
+                .refreshable {
+                    for day in current_week {
+                        day.updatePercentages()
+                    }
                 }
                 .scrollContentBackground(.hidden)
             }
