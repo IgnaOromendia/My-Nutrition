@@ -26,6 +26,9 @@ struct MealsVew: View {
                         ForEach(meal.foods()) { food in
                             FoodCell(of: food)
                         }
+                        .onDelete { offsets in
+                            meal.deleteFood(atOffsets: offsets)
+                        }
                     } header: {
                         Text(meal.momentString())
                             .font(.system(size: 25))
@@ -33,7 +36,7 @@ struct MealsVew: View {
                             .foregroundColor(.black)
                     }
                 }
-               .scrollContentBackground(.hidden)
+                .scrollContentBackground(.hidden)
             }
             .navigationTitle(displayDay.date().prettyDate + "'s meals")
         }

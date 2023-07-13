@@ -86,13 +86,14 @@ class Meal: Equatable, CustomStringConvertible, Codable, Identifiable {
     // Add a single food
     func addFood(_ food: Food) {
         _foods.append(food)
-        _counter[food.type().rawValue] += 1
+        let i = food.type().rawValue
+        if i >= 0 { _counter[i] += 1 }
     }
     
     // MARK: - DELETES
     
     /// Delete food
-    func delete_food(_ food: Food) {
+    func deleteFood(_ food: Food) {
         for (i,_food) in _foods.enumerated() {
             if _food == food {
                 _counter[_food.type().rawValue] -= 1
@@ -102,26 +103,35 @@ class Meal: Equatable, CustomStringConvertible, Codable, Identifiable {
     }
     
     /// Delete food at index
-    func delete_food_at(_ i: Int) {
+    func deleteFood(at i: Int) {
         let j = _foods[i].type().rawValue
         _counter[j] -= 1
         _foods.remove(at: i)
     }
     
+    /// Delete food at offset
+    func deleteFood(atOffsets offsets: IndexSet) {
+        if let index = offsets.first {
+            let i = _foods[index].type().rawValue
+            _counter[i] -= 1
+        }
+        _foods.remove(atOffsets: offsets)
+    }
+    
     /// Delete last
-    func delete_last() {
+    func deleteLast() {
         let i = _foods.removeLast().type().rawValue
         _counter[i] -= 1
     }
     
     /// Delete first
-    func delete_first() {
+    func deleteFirst() {
         let i = _foods.removeFirst().type().rawValue
         _counter[i] -= 1
     }
     
     /// Delete all foods and reset counter
-    func delete_all() {
+    func deleteAll() {
         _counter = [0,0,0]
         _foods.removeAll()
     }

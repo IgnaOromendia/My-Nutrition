@@ -110,14 +110,14 @@ class Day: Equatable, Codable, Identifiable, CustomStringConvertible {
     
     /// Delete one meal at the moment specified
     func deleteMeal(on moment: DayMoment) {
-        _meals[moment.rawValue].delete_all()
+        _meals[moment.rawValue].deleteAll()
         updatePercentages()
     }
     
     /// Delete all meals
     func deleteAllMeals() {
         for i in 0..._meals.count {
-            _meals[i].delete_all()
+            _meals[i].deleteAll()
         }
         proteinPer = 0
         carbohdratesPer = 0
@@ -140,9 +140,11 @@ class Day: Equatable, Codable, Identifiable, CustomStringConvertible {
     private func updatePercentages() {
         let typesCount = foodCount()
         let totalCount = typesCount[0] + typesCount[1] + typesCount[2]
-        proteinPer      = (typesCount[FoodType.protein.rawValue]        * 100) / totalCount
-        carbohdratesPer = (typesCount[FoodType.carbohydrates.rawValue]  * 100) / totalCount
-        vegetablesPer   = (typesCount[FoodType.vegetables.rawValue]     * 100) / totalCount
+        if totalCount > 0 {
+            proteinPer      = (typesCount[FoodType.protein.rawValue]        * 100) / totalCount
+            carbohdratesPer = (typesCount[FoodType.carbohydrates.rawValue]  * 100) / totalCount
+            vegetablesPer   = (typesCount[FoodType.vegetables.rawValue]     * 100) / totalCount
+        }
     }
     
     
