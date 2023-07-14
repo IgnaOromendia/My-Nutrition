@@ -11,20 +11,22 @@ import SwiftUI
 fileprivate let circleFrame: CGFloat = 23
 
 struct WeekCell: View {
-    let title: String
-    let color: UIColor
-    let proteinPrecentage: Int
-    let carbohydratesPrecentage: Int
-    let vegetablesPrecentage: Int
-    let day: Day
+    let title                   : String
+    let color                   : UIColor
+    let proteinPrecentage       : Int
+    let carbohydratesPrecentage : Int
+    let vegetablesPrecentage    : Int
+    let day                     : Day
+    let editable                : Bool
     
-    init(day: Day, color: UIColor) {
+    init(day: Day, color: UIColor, editable: Bool) {
         self.day                     = day
         self.title                   = day.date().prettyDate
         self.color                   = color
         self.proteinPrecentage       = day.foodPercentage(of: .protein)
         self.carbohydratesPrecentage = day.foodPercentage(of: .carbohydrates)
         self.vegetablesPrecentage    = day.foodPercentage(of: .vegetables)
+        self.editable                = editable
     }
     
     var body: some View {
@@ -34,7 +36,7 @@ struct WeekCell: View {
                 .cornerRadius(20)
             VStack {
                 NavigationLink(title) {
-                    MealsVew(day: day)
+                    MealsVew(day: day, editable: editable)
                 }
                 .padding(.vertical, 10)
                 .padding(.horizontal, 40)

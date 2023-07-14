@@ -11,7 +11,10 @@ import SwiftUI
 // Variables
 let today = Date()
 let oneDay: TimeInterval = 86400
+
+// Images
 let shareImage = "square.and.arrow.up"
+let calendarImage = "calendar"
 
 // Typealias
 

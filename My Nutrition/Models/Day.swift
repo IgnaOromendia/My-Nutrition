@@ -151,9 +151,6 @@ class Day: Equatable, Codable, Identifiable, CustomStringConvertible {
             carbohdratesPer = (typesCount[FoodType.carbohydrates.rawValue]  * 100) / totalCount
             vegetablesPer   = (typesCount[FoodType.vegetables.rawValue]     * 100) / totalCount
         }
-        print(proteinPer)
-        print(carbohdratesPer)
-        print(vegetablesPer)
     }
     
     

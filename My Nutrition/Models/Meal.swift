@@ -105,7 +105,7 @@ class Meal: Equatable, CustomStringConvertible, Codable, Identifiable {
     /// Delete food at index
     func deleteFood(at i: Int) {
         let j = _foods[i].type().rawValue
-        _counter[j] -= 1
+        if j >= 0 { _counter[j] -= 1 }
         _foods.remove(at: i)
     }
     
@@ -113,7 +113,7 @@ class Meal: Equatable, CustomStringConvertible, Codable, Identifiable {
     func deleteFood(atOffsets offsets: IndexSet) {
         if let index = offsets.first {
             let i = _foods[index].type().rawValue
-            _counter[i] -= 1
+            if i >= 0 { _counter[i] -= 1 }
         }
         _foods.remove(atOffsets: offsets)
     }

@@ -15,50 +15,43 @@ extension Date {
     
     /// Number of week day
     var weekDay: Int {
-        return Calendar.current.component(.weekday, from: self) - 2
+        let day = Calendar.current.component(.weekday, from: self) - 2
+        return day == -1 ? 6 : day
     }
     
     /// Returns a string date with this fomrat: 12/12/2021
     var comparableDate: String {
-        get {
-            let date = Calendar.current.dateComponents([.day,.month,.year], from: self)
-            return "\(date.day ?? -1)/\(date.month ?? -1)/\(date.year ?? -1)"
-        }
+        let date = Calendar.current.dateComponents([.day,.month,.year], from: self)
+        return "\(date.day ?? -1)/\(date.month ?? -1)/\(date.year ?? -1)"
     }
     
-    /// Returns a date for a file name, 9-12-18
+    /// Returns a date for a file name, 9-12-2018
     var storageDate: String {
-        get {
-            let date = Calendar.current.dateComponents([.day,.month,.year], from: self)
-            return "\(date.day ?? -1)-\(date.month ?? -1)-\(date.year ?? -1)"
-        }
+        let date = Calendar.current.dateComponents([.day,.month,.year], from: self)
+        return "\(date.day ?? -1)-\(date.month ?? -1)-\(date.year ?? -1)"
     }
     
     /// Returns string date 26/03
     var dayMonthDate: String {
-        get {
-            let date = Calendar.current.dateComponents([.day,.month], from: self)
-            if let day = date.day, let month = date.month {
-                let finalDay = day < 10 ? "0\(day)/" : "\(day)/"
-                let finalMonth = month < 10 ? "0\(month)" : "\(month)"
-                return finalDay + finalMonth
-            }
-            return "Error"
+        let date = Calendar.current.dateComponents([.day,.month], from: self)
+        if let day = date.day, let month = date.month {
+            let finalDay = day < 10 ? "0\(day)/" : "\(day)/"
+            let finalMonth = month < 10 ? "0\(month)" : "\(month)"
+            return finalDay + finalMonth
         }
+        return "Error"
     }
     
     /// Returns the date but if it's equal to today, retruns "today" and similar with "yesterday"
     var prettyDate: String {
-        get {
-            if self.comparableDate == today.comparableDate {
-                return "Today"
-            } else if self.comparableDate == (today - oneDay).comparableDate {
-                return "Yesterady"
-            } else if self.comparableDate == (today + oneDay).comparableDate {
-                return "Tomorrow"
-            } else {
-                return self.dayMonthDate
-            }
+        if self.comparableDate == today.comparableDate {
+            return "Today"
+        } else if self.comparableDate == (today - oneDay).comparableDate {
+            return "Yesterady"
+        } else if self.comparableDate == (today + oneDay).comparableDate {
+            return "Tomorrow"
+        } else {
+            return self.dayMonthDate
         }
     }
     
@@ -83,6 +76,16 @@ extension Date {
         default:
             return .dinner
         }
+    }
+    
+    /// Returns the monday of the week
+    var weekMonday: Date {
+        return self - (oneDay * Double(self.weekDay))
+    }
+    
+    /// Returns the result of incrementing this date by the input given
+    func increment(by days: Int) -> Date {
+        return self + (oneDay * Double(days))
     }
     
 }

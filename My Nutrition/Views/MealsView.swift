@@ -11,9 +11,11 @@ import SwiftUI
 struct MealsVew: View {
         
     private var displayDay: Day
+    let editable          :Bool
     
-    init(day: Day) {
-        displayDay = day
+    init(day: Day, editable: Bool) {
+        self.displayDay = day
+        self.editable = editable
     }
     
     var body: some View {
@@ -36,6 +38,7 @@ struct MealsVew: View {
                             .foregroundColor(.black)
                     }
                 }
+                .deleteDisabled(!editable)
                 .scrollContentBackground(.hidden)
             }
             .onDisappear {
@@ -48,6 +51,6 @@ struct MealsVew: View {
 
 struct MealsView_Preview: PreviewProvider {
     static var previews: some View {
-        MealsVew(day: current_week[today.weekDay])
+        MealsVew(day: current_week[today.weekDay], editable: true)
     }
 }
