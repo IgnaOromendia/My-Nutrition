@@ -17,11 +17,12 @@ let shareImage = "square.and.arrow.up"
 let calendarImage = "calendar"
 
 // Typealias
-
 typealias Week = Array<Day>
 
-// Enums
+// File name
+let masterFileName = "MyNutrtionData"
 
+// Enums
 enum GoalType: Int, Codable {
     case A = 0
     case B = 1
@@ -34,6 +35,17 @@ enum FoodType: Int, Codable {
     case vegetables     = 2
 }
 
+enum DayMoment: Int, Codable {
+    case breakfast   = 0
+    case collation1  = 1
+    case lunch       = 2
+    case snack       = 3
+    case collation2  = 4
+    case dinner      = 5
+}
+
+
+// Enum Funcs
 func passFoodTypeToString(_ type: FoodType) -> String {
     switch type {
     case .protein:
@@ -58,15 +70,6 @@ func colorFoodType(_ type: FoodType) -> (Color,Color){ // Background, TextColor
     default:
         return (.black, .white)
     }
-}
-
-enum DayMoment: Int, Codable {
-    case breakfast   = 0
-    case collation1  = 1
-    case lunch       = 2
-    case snack       = 3
-    case collation2  = 4
-    case dinner      = 5
 }
 
 func passMomentToString(_ moment: DayMoment) -> String {

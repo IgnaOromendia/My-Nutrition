@@ -5,38 +5,6 @@
 //  Created by Igna on 26/06/2023.
 //
 
-/*  Passing Data
-    @State more global, used in master view
-    @Binding used in any view where you want to pass the data
-    
-    Example (Wiki app):
-        -- Master view --
-        @State private var selectedPage: Page = Page()
- 
-        NavigationLink(destination: PageView(page: $selectedPage))
- 
-        The master and detail view point to the same page.
-        Any changes you make in the detail view will appear in both views.
-        
-        -- Detail view --
-        @Binding var page: Page
-    
-    *** ***
-    @StateObject property to pass a class instance to other views
-    Any properties you want automatically updated must use the @Published property wrapper.
-    
-    Example (Project):
-    class Project: ObservableObject {
-        @Published var issues: [Issue]
-    }
- 
-    By making the class conform to ObservableObject and using @Published for the issues array,
-    you can use @StateObject in any view that needs to access the project.
- 
-    @StateObject var project: Project
-    
- */
-
 import SwiftUI
 
 struct AddMealView: View {
@@ -129,6 +97,8 @@ struct AddMealView: View {
                     
                     // Button
                     Button("Finish") {
+                        weeks.updateValue(current_week, forKey: current_week.key())
+                        StorageManager.saveData(weeks)
                         dismiss()
                     }
                     .padding(10)

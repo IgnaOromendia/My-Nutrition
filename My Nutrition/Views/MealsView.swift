@@ -9,9 +9,10 @@ import Foundation
 import SwiftUI
 
 struct MealsVew: View {
-        
-    private var displayDay: Day
-    let editable          :Bool
+    
+    @State private var deletedAnElement :Bool = false
+    private var displayDay              :Day
+    let editable                        :Bool
     
     init(day: Day, editable: Bool) {
         self.displayDay = day
@@ -30,6 +31,7 @@ struct MealsVew: View {
                         }
                         .onDelete { offsets in
                             meal.deleteFood(atOffsets: offsets)
+                            deletedAnElement = true
                         }
                     } header: {
                         Text(meal.momentString())
@@ -42,7 +44,11 @@ struct MealsVew: View {
                 .scrollContentBackground(.hidden)
             }
             .onDisappear {
-                current_week[displayDay.date().weekDay].updatePercentages()
+                if deletedAnElement {
+                    current_week[displayDay.date().weekDay].updatePercentages()
+                    weeks.updateValue(current_week, forKey: current_week.key())
+                    StorageManager.saveData(weeks)
+                }
             }
             .navigationTitle(displayDay.date().prettyDate + "'s meals")
         }
